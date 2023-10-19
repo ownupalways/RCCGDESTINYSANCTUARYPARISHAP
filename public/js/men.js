@@ -39,54 +39,54 @@ function closeWindow(event) {
 
 
 // TESTIMONY PAGE ---------------
-const testimonyMessage = document.querySelector('.testimonyMessage')
-console.log(testimonyMessage)
+// const testimonyMessage = document.querySelector('.testimonyMessage')
+// console.log(testimonyMessage)
 
-var postBtn = document.querySelector('.postBtn')
-console.log(postBtn)
+// var postBtn = document.querySelector('.postBtn')
+// console.log(postBtn)
 
-testimonyMessage.addEventListener('focus', () => {
-    postBtn.style.display = "flex"
-})
+// testimonyMessage.addEventListener('focus', () => {
+//     postBtn.style.display = "flex"
+// })
 
 
-const PointInDelete = document.querySelector('#PointInDelete')
+// const PointInDelete = document.querySelector('#PointInDelete')
 
-PointInDelete.addEventListener('click', () => {
-    const tMessage = document.querySelector('.testimonyMessage')
-    tMessage.value =''
+// PointInDelete.addEventListener('click', () => {
+//     const tMessage = document.querySelector('.testimonyMessage')
+//     tMessage.value =''
 
-    removeBtns();
-})
+//     removeBtns();
+// })
 
-function removeBtns() {
-    postBtn.style.display = "none"
-}
+// function removeBtns() {
+//     postBtn.style.display = "none"
+// }
 
 // ADDING NEW TESTIMONY BOX--------
-let TestimonyBtn = document.querySelector('.TestimonyBtn')
-console.log(TestimonyBtn)
+// let TestimonyBtn = document.querySelector('.TestimonyBtn')
+// console.log(TestimonyBtn)
 
-TestimonyBtn.addEventListener('click', function() {
-    testimonyBox()
-})
+// TestimonyBtn.addEventListener('click', function() {
+//     testimonyBox()
+// })
 
-function testimonyBox() {
-    const newTestimony = document.createElement('div')
-    newTestimony.classList.add('PointIn')
-    const PointIn = document.querySelector('.PointIn')
-    const PointInContent = `
-    <form class="testimony-message" style="background-color:black;">
-        <h2><i>Let Somebody Shout Halleluyah!</i></h2>
-        <textarea class="testimonyMessage" name="Comment" placeholder="Testify Here" id="testify" cols="28" rows="5"></textarea>
-        <div class="postBtn">
-            <input type="button" id="PointInDelete" value="Delete">
-            <input type="button" id="PointInPost" value="Testify">
-        </div>
-    </form>`
-    newTestimony.innerHTML = PointInContent
-    PointIn.appendChild(newTestimony)
-}
+// function testimonyBox() {
+//     const newTestimony = document.createElement('div')
+//     newTestimony.classList.add('PointIn')
+//     const PointIn = document.querySelector('.PointIn')
+//     const PointInContent = `
+//     <form class="testimony-message" style="background-color:black;">
+//         <h2><i>Let Somebody Shout Halleluyah!</i></h2>
+//         <textarea class="testimonyMessage" name="Comment" placeholder="Testify Here" id="testify" cols="28" rows="5"></textarea>
+//         <div class="postBtn">
+//             <input type="button" id="PointInDelete" value="Delete">
+//             <input type="button" id="PointInPost" value="Testify">
+//         </div>
+//     </form>`
+//     newTestimony.innerHTML = PointInContent
+//     PointIn.appendChild(newTestimony)
+// }
 
 // CONTACT INTERACTION FOR EMAIL SENDING
 $('form').on('submit', (e) => {
