@@ -1,0 +1,193 @@
+
+
+.testimony-container {
+    margin-top: 7rem;
+    height: auto;
+    background-color: rgb(233, 10, 10);
+    z-index: -11;
+  }
+  
+  .TestimonyBtn {
+    width:100%;
+    height: 40%;
+    font-weight:bold;
+    color: #f1f1f1;
+    background-color: rgb(40, 40, 218);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+  
+   .TestimonyBtn:hover {
+    border: #f1f1f1 solid 2px;
+    background: rgba(86, 86, 201, 0.9);
+    transition: ease-in-out .3s;
+    -webkit-transition: ease-in-out .3s;
+    -moz-transition: ease-in-out .3s;
+    -ms-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
+  }
+  
+  .testimony {
+    border: #000 solid 2px;
+    padding: none;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+  
+  .testimonyMessage {
+    align-self: center;
+    width: -moz-available;
+    font-size: 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border: none;
+    outline: none;
+    background: transparent;
+    resize: none;
+    padding: 5px;
+    color: #fff;
+  } 
+  
+    .thanksgiving-panel{
+    width:100%;
+    margin: 4px;
+    background-color: rgb(88, 85, 85);
+    border-radius:8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    -ms-border-radius:8px;
+    -o-border-radius:8px;
+    }
+    
+    .thanksgiving-panel img {
+    width: 30%;
+    float: left;
+    margin: 6px 10px 0 6px;
+    border-radius:8px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    -ms-border-radius:8px;
+    -o-border-radius:8px;
+    }
+  
+    .imageCard {
+      max-width: 100%;
+      max-height: 50%;
+      padding: 10px 10px 0 10px;
+    }
+    .thanksgiving{
+    top: 0;
+    font-weight: bolder;
+    text-align: justify;
+    padding: 15px;
+    color: white;
+    }
+    
+    .thanksgiving .cutoff-text {
+      font-size: 18px;
+    }
+    .HeadingNote {
+      font-size: 20px;
+      padding-bottom: 8px;
+      color:white;
+    }
+    
+    .expand-btn {
+      display: none;
+    }
+  
+    .Point {
+      margin: auto;
+      width: 50%;
+      height:'';
+      background-color:rgba(221, 230, 217, 0.4); 
+      padding: 5px;
+    }
+    
+     .PointIn {
+      margin: auto;
+      width: 100%;
+      /* margin: 10px; */
+      border-radius:4px;
+      -webkit-border-radius:4px;
+      -moz-border-radius:4px;
+      -ms-border-radius:4px;
+      -o-border-radius:4px;
+    }
+  
+    .PointIn #PointInDelete:hover {
+      border: #f1f1f1 solid 1.5px;
+      color: #fff;
+    }
+    
+    .PointIn #PointInDelete {
+     width: 80px;
+     height: 30px;
+     margin: 8px 4px 4px 4px;
+     border: none;
+     outline: none;
+     border-radius: 4px;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -ms-border-radius: 4px;
+     -o-border-radius: 4px;
+    }
+    #PointInPost {
+    width: 80px;
+     height: 30px;
+     margin: 8px 4px 4px 35px;
+     border: none;
+     outline: none;
+     border-radius: 4px;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -ms-border-radius: 4px;
+     -o-border-radius: 4px;
+    }
+    .PointIn .postBtn {
+      display: none;
+      flex-wrap: wrap;
+    }
+    
+    .PointIn #PointInPost:hover {
+      background-color: rgba(64, 64, 247, 0.9);
+      color: #fff;
+      border: #f1f1f1 solid 1px;
+    }
+    
+  .PointIn .testimony-message {
+    background-color:rgb(131, 120, 120);
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+  }
+  
+  /* SHARE TESTIMONY PAGE */
+  
+  .share-card {
+    width: 8px;
+    height: 8px;
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }

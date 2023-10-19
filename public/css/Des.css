@@ -1,0 +1,489 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    font-size: 14px;
+    color: #000;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+  }
+
+  /* .bodyAll {
+    background-color: #000;
+  }
+   */
+
+  .bodyBox{
+    color:#070707;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    transition: 3s all;
+    -webkit-transition: 3s all;
+    -moz-transition: 3s all;
+    -ms-transition: 3s all;
+    -o-transition: 3s all;
+    z-index: 1111;
+    position: fixed;
+    top: 0;
+}
+
+/* HEADER NAVIGATION BAR*/
+.mainMenu {
+  margin-top: 2rem;
+  justify-content: center;
+}
+#menuLine {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+ul li {
+  margin-left: 40px;
+  display: inline-block;
+}
+
+.mainMenu ul li a {
+  /* width: 80px;
+  height: 45px; */
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(14, 13, 13);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+ul li.active{
+  background-color: rgba(76, 103, 134, 0.5);
+}
+
+.pinBtn:hover{
+  background-color: rgba(76, 103, 134, 0.5);
+}
+
+.menu {
+  display: none;
+}
+
+/* MAIN BODY STYLING */
+.main-body {
+  background-color: #000;
+}
+
+  
+  /*Logo Affair*/
+  .head1{
+   float: right;
+   overflow: hidden;
+   position: relative;
+   top: -4rem;
+  }
+  
+  .head1 .spaceIn {
+    margin: 4px;
+    padding: 5px;
+  }
+  .head1 img {
+    width:30px;
+   align-items: flex-end;
+  }
+  
+  .logo{
+    border-radius: 50px;
+    float: right;
+    margin-right: 40px;
+  }
+  
+  .ds{
+    color: white;
+    margin-left: 20px;
+  }
+  
+  /*Sidebar navigation*/
+  .menuBox {
+    position:fixed;
+    left:-250px;
+    width: 250px;
+    height:100%;
+    background-color: #000;
+    user-select: none;
+    transition: all .5s ease;
+    z-index: 110;
+    overflow-wrap: all;
+  }
+  
+  .side{
+    opacity: 0.9;
+  }
+  
+  .menuBox ul a {
+    display: block;
+    height: 80%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color:white;
+    padding-left:15px;
+    box-shadow: border-box;
+    transition: all .4s;
+  }
+  
+  .u {
+    padding:40px 0;
+  }
+  .u .l:hover a{
+    padding-left:65px;
+    box-shadow:2px 2px 4px;
+    transition: all;
+  }
+  
+  .menuBox ul a i {
+    margin-right:16px;
+  }
+    
+  .menuBox ul{
+    margin-right: 5px;
+  }
+  
+  .menuBox header{
+    font-size: 22px;
+    color:white;
+    text-align:center;
+    line-height:70px;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+  }
+  
+  label #btn{
+    left: 40px;
+    top:20px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all;
+    z-index: 100;
+    display: none;
+  }
+  
+  label #cancel{
+    position: fixed;
+    z-index: 11111;
+    left: -195px;
+    top:5px;
+    font-size:20px;
+    color:white;
+    padding: 7px 10px;
+    transition: all 0.5s;
+  }
+  
+ #check:checked ~ .menuBox{
+    left:0;
+  }
+  
+  #check:checked ~label #btn{
+    left:250px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #check:checked ~label #cancel{
+    left: 210px;
+  }
+  
+  .A a i{
+    font-size: 30px;
+  }
+  
+  .A a i:hover{
+    color:whitesmoke;
+  }
+  
+  ul .A{
+    padding-right: 20px;
+    margin: 0px;
+  }
+  
+  .A{
+    padding-right: 0;
+    margin-right: 5px
+  }
+   
+  /* ONEPAGE.HTML STARTS HERE*/
+  
+  .navTab {
+    display: flex;
+    z-index: 1000;
+    margin: 1rem 20% 0 20%;
+    align-content: center;
+    position: fixed;
+    top: 5%;
+  }
+  
+  .navTab span {
+    outline: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #f1f1f1;
+    margin-right: 5px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  
+  .navTab span:hover {
+    background-color: rgba(221, 230, 217, 0.4);
+  }
+  
+  .navTab span.active {
+    border-bottom: #fff solid;
+  }
+  
+  .tag_right{
+    float: right;
+    position: top;
+  }
+
+  
+  /*Sunday school handle for toggle and navigation*/
+  .sunday{
+    padding-left: 20px;
+    display: none;
+  }
+  
+  .batch{
+    padding-left: 20px;
+    display: none;
+  }
+  .payment{
+    margin-left: 25px;
+    display: none;
+  }
+  
+  .zone{
+    display: none;
+  }
+  
+  .parish{
+    display: none;
+  }
+  
+  .area{
+    display: none;
+  }
+  
+  .region{
+    display: none;
+  }
+  
+  .region li div:hover {
+    font-size: large;
+  }
+  
+
+  /*ABOUT.HTML CONTENT*/
+  .About{
+    font-size: 25px;
+    padding: 15px 4px;
+    color: white;
+    line-height: 1;
+    text-align: justify;
+  }
+  
+  .About strong{
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    word-spacing: 6px;
+  }
+  .cool{
+    color: rgb(21, 32, 192);
+    font-size: 10px;
+  }
+  
+  .cool:hover{
+    cursor: pointer;
+    color:hotpink;
+  }
+  .ishola{
+    border-radius: 4px;
+    display: none;
+  }
+  
+  hr{
+    width: 50%;
+    margin: 0% 0% 25% 25%;
+  }
+  .updating {
+      margin-top: 100px;
+      font-size: 10em;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+  
+  
+  
+  i {
+    padding: 5px;
+    color:#fff;
+    font-size:15px;
+    align-items:center;
+  }
+ 
+  .boxImage h3 {
+    color: #fff;
+    text-align: center;
+  }
+  .imageCube {
+    min-width: 140px;
+    margin: 0 7px ;
+    border: 2px solid whitesmoke;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+  
+  .imageCube img {
+    width: 100%;
+    height: 150px;
+  }
+  
+  /*Footer Section design*/
+  footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    position: fixed;
+    bottom: -18%;
+    width:100%;
+    z-index: 1110;
+    background-color:rgba(63, 136, 185, 0.8);
+    transition: .8s;
+    -webkit-transition: .8s;
+    -moz-transition: .8s;
+    -ms-transition: .8s;
+    -o-transition: .8s;
+  }
+  
+  footer:hover {
+    bottom: 0;
+  }
+  
+  .foot2{
+    color: white;
+    font-size: 1.3rem;
+    padding:10px;
+  }
+  
+  .foot2 i{
+    padding:5px;
+    color: #f1f1f1;
+  }
+  
+  .foot2:hover, .foot2 i:hover{
+    color:rgb(192, 191, 191);
+    cursor: pointer;
+    font-weight:bold;
+  }
+  
+  .hed{
+    color: rgb(26, 21, 70);
+    font-size: 1.5rem;
+    outline: #ccc;
+  }
+  
+  .company{
+    color: rgb(9, 4, 10);
+    align-self: flex-end;
+  
+  }
+  
+  /* set a style for all button*/
+  
+  button{
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 8px;
+  }
+  
+   b{
+    color: white;
+   }
+  
+  /*Float cancel and Sign up buttons and add an equal width*/
+  .cancelbtny, .btny{
+    width: 180px;
+    font-size: 15px;
+    font-weight: bolder;
+    background:transparent;
+    color: white;
+  }
+  
+  .cancelbtnyLongin, .btnyLogin{
+    width: 120px;
+    font-size: 15px;
+    font-weight: bolder;
+    background:transparent;
+    color: white;
+  }
+
+  .btny, .btnyLogin{
+    float:left;
+  }
+
+  .cancelbtny, .cancelbtnyLongin{
+    float: right;
+  }
+  
+  .btnyLogin:hover{
+    background-color: rgb(8, 151, 8);
+    color: white;
+  }
+
+  .btny:hover {
+    background-color: rgb(8, 151, 8);
+    color: white;
+  }
+
+  .cancelbtnyLongin:hover{
+    background-color:#ee0f0f;
+    color: white;
+    border: white 2px solid;
+  }
+
+  .cancelbtny:hover{
+    background-color: #ee0f0f;
+    color: white;
+  }
+
+  .clearfix{
+    padding-right: 10px;
+  }
+
