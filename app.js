@@ -3,13 +3,15 @@ const sendMail = require('./mail')
 const expressLayouts = require('express-ejs-layouts')
 
 const path = require('path')
-const dotenv = require('dotenv')
+// const dotenv = require('dotenv')
+
+require('dotenv').config()
 
 const app = express()
 
 const port = 3500
 
-dotenv.config({ path: './.env'})
+// dotenv.config({ path: './.env'})
 
 app.listen(port, () => console.info(`Listening on port ${port}`))
 

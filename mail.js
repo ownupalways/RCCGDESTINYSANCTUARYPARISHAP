@@ -1,12 +1,12 @@
 const nodemailer = require('nodemailer')
 const mailGun = require('nodemailer-mailgun-transport')
-
+require('dotenv').config()
 
 
 
 const auth = {
     auth: {
-        api_key: PROCESS.ENV.API_KEY,
+        api_key: process.env.API_KEY,
         domain:'sandboxe0269188a1484f04aa9b0d680c2f1711.mailgun.org'
     }
 }
