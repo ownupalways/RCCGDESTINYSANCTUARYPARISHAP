@@ -125,4 +125,22 @@ menuCancelBtn.addEventListener('click', (e) => {
     headerCard.style.left = '-580px'
     menuBtn.style.display = 'block'
 })
+
+
+// FOOTER DISPLAY OPERATION 
+
+let footerBtn = document.querySelector('.footerBtn')
+let footerCard = document.querySelector('#footerCard')
+
+let footerCloseBtn = document.querySelector('.footer-closeBtn')
+footerBtn.addEventListener('click', () => {
+    footerBtn.style.display = 'none'
+    footerCard.style.display = 'grid'
+})
+
+footerCloseBtn.addEventListener('click', (e) => {
+    let footerCloseBtnClicked = e.target 
+    footerCloseBtnClicked.parentElement.style.display = 'none'
+    footerBtn.style.display = 'block'
+})
     

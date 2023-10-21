@@ -99,7 +99,6 @@ ul li.active{
   border-radius: 50px;
 }
 
-/* MEDIA QUERY MENU CARD/ SIDEBAR MENU */
 .responsive-menu-btns {
   position: absolute;
   top: 5px;
@@ -116,9 +115,13 @@ ul li.active{
   cursor:pointer;
 }
 
-
-
+/* MEDIA QUERY MENU CARD/ SIDEBAR MENU */
 @media (max-width:880px) {
+  .logoAndMenuResponsiveDisplay{
+    width: 100%;
+    height:100px ;
+    background-color: #ee0f0f;
+  }
   .bodyBox {
     background: rgba(17, 16, 16, 0.9);
     width: 60%;
@@ -168,6 +171,11 @@ ul li.active{
     margin-top: 8rem;
     margin-bottom: 3rem;
     display: block;
+  }
+
+   /* FOOTER LINE */
+   .footer-itemCard {
+    margin-top: 20px;
   }
 }
 
@@ -223,6 +231,11 @@ ul li.active{
     margin-bottom: 3rem;
     display: block;
   }
+
+  /* FOOTER LINE */
+  .footer-itemCard {
+    margin-top: 20px;
+  }
 }
 
 
@@ -246,16 +259,42 @@ ul li.active{
     height: 150px;
   }
   
-  /*Footer Section design*/
+  /*FOOTER SECTION DESIGN*/
   .footerBtn {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     height: 20px;
     width: 120px;
     padding: 40px;
     background-color:rgba(63, 136, 185, 0.8);
     border-radius: 50% 5px 5px 50%;
+    cursor: pointer;
+  }
+
+  .footer-closeBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+  }
+  .footerBtn:hover {
+    background: black;
+    color: white;
+    border: 1px solid white;
+  }
+
+  .footerBtn h1 {
+    font-size: 20px;
+    font-weight: bold;
   }
   footer{
     display: none;
@@ -265,7 +304,7 @@ ul li.active{
     position: fixed;
     bottom: -18%;
     width:100%;
-    z-index: 1110;
+    z-index: 111111;
     background-color:rgba(63, 136, 185, 0.8);
     transition: .8s;
     -webkit-transition: .8s;
@@ -277,6 +316,7 @@ ul li.active{
   footer:hover {
     bottom: 0;
   }
+  
   
   .foot2{
     color: white;
