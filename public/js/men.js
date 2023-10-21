@@ -110,16 +110,19 @@ $('form').on('submit', (e) => {
 // MEDIA QUERY MENU CARD/ SIDEBAR MENU
 let menuBtn = document.querySelector('#btn')
 let menuCancelBtn = document.querySelector('#cancel')
+let headerCard = document.querySelector('.bodyBox')
 
 menuBtn.addEventListener('click', (e) => {
     let clickedBtn = e.target
     clickedBtn.style.display = 'none'
+    headerCard.style.left = '0px'
     menuCancelBtn.style.display = 'block'
 })
 
 menuCancelBtn.addEventListener('click', (e) => {
     let cancelBtnclicked = e.target
     cancelBtnclicked.style.display = 'none'
+    headerCard.style.left = '-580px'
     menuBtn.style.display = 'block'
 })
     
