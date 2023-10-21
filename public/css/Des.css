@@ -130,20 +130,76 @@ ul li.active{
     left: -580px;
   }
   
-  .mainMenu ul li {
-    padding: 12px;
-    font-size: 16px;
+  .mainMenu ul li a {
+    padding: 18px;
+    font-size: 24px;
     color:#fff;
     font-weight: bold;
     justify-content: start;
     align-items: start;
     border-radius: 0;
+    margin-left: 0;
   }
 
 
   .mainMenu ul li a #iconBtn {
     display: block;
     margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .responsive-menu-btns {
+    position: absolute;
+    z-index: 1111;
+    display: block;
+  }
+
+  .responsive-menu-btns #cancel {
+    display: none;
+  }
+
+  #menuLine li {
+    margin-left: 0;
+    display: block;
+    /* width: 100%; */
+  }
+
+  #menuLine {
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    display: block;
+  }
+}
+
+
+@media (max-width:300px) {
+  .bodyBox {
+    background: rgba(17, 16, 16, 0.9);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transition: 1s all;
+    z-index: 1111;
+    top: 0;
+    left: -580px;
+  }
+  
+  .mainMenu ul li a {
+    padding: 18px;
+    font-size: 24px;
+    color:#fff;
+    font-weight: bold;
+    justify-content: start;
+    align-items: start;
+    border-radius: 0;
+    margin-left: 0;
+  }
+
+
+  .mainMenu ul li a #iconBtn {
+    display: block;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   .responsive-menu-btns {
@@ -191,8 +247,18 @@ ul li.active{
   }
   
   /*Footer Section design*/
+  .footerBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 120px;
+    padding: 40px;
+    background-color:rgba(63, 136, 185, 0.8);
+    border-radius: 50% 5px 5px 50%;
+  }
   footer{
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 10px;
     padding: 10px;
