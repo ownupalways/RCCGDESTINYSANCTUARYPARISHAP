@@ -107,7 +107,19 @@ $('form').on('submit', (e) => {
         })
     })
 
+// MEDIA QUERY MENU CARD/ SIDEBAR MENU
+let menuBtn = document.querySelector('#btn')
+let menuCancelBtn = document.querySelector('#cancel')
 
+menuBtn.addEventListener('click', (e) => {
+    let clickedBtn = e.target
+    clickedBtn.style.display = 'none'
+    menuCancelBtn.style.display = 'block'
+})
 
-
+menuCancelBtn.addEventListener('click', (e) => {
+    let cancelBtnclicked = e.target
+    cancelBtnclicked.style.display = 'none'
+    menuBtn.style.display = 'block'
+})
     

@@ -1,6 +1,9 @@
+*{
+  color: white;
+}
+
 .about-carrier {
     margin-top: 7rem;
-    
   }
 
   .about-board {
@@ -19,7 +22,7 @@
   }
   .about-card h1 {
     font-size: 25px;
-    color: black;
+    color: white;
     text-align: center;
     padding-bottom: 5px;
   }
@@ -31,7 +34,7 @@
     justify-content: center;
     line-height: 2;
     padding: 15px;
-    color: black;
+    color: white;
     font-size: 18x;
     box-shadow: rgb(238, 238, 238) 1px 0 1px 4px;
     border-radius: 12px;

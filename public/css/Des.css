@@ -30,17 +30,6 @@
     top: 0;
 }
 
-@media screen and (max-width: 880px){
-  .bodyBox {
-    display: none;
-  }
-  .menu {
-    display: block;
-    color: #000; 
-  }
-
-}
-
 /* HEADER NAVIGATION BAR*/
 .mainMenu {
   margin-top: 2rem;
@@ -58,8 +47,6 @@ ul li {
 }
 
 .mainMenu ul li a {
-  /* width: 80px;
-  height: 45px; */
   padding: 10px;
   font-size: 16px;
   color:#fff;
@@ -108,254 +95,72 @@ ul li.active{
   border-radius: 50px;
 }
 
-.ds{
-  color: white;
-  margin-left: 20px;
-}
-
-/*Sidebar navigation*/
-.menuBox {
-  position:fixed;
-  left:-250px;
-  width: 250px;
-  height:100%;
-  background-color: #000;
-  user-select: none;
-  transition: all .5s ease;
-  z-index: 110;
-  overflow-wrap: all;
-}
-
-.side{
-  opacity: 0.9;
-}
-
-.menuBox ul a {
-  display: block;
-  height: 80%;
-  width: 100%;
-  line-height: 65px;
-  font-size: 20px;
-  color:white;
-  padding-left:15px;
-  box-shadow: border-box;
-  transition: all .4s;
-}
-
-.u {
-  padding:40px 0;
-}
-.u .l:hover a{
-  padding-left:65px;
-  box-shadow:2px 2px 4px;
-  transition: all;
-}
-
-.menuBox ul a i {
-  margin-right:16px;
-}
-  
-.menuBox ul{
-  margin-right: 5px;
-}
-
-.menuBox header{
-  font-size: 22px;
-  color:white;
-  text-align:center;
-  line-height:70px;
-}
-
-#check{
+/* MEDIA QUERY MENU CARD/ SIDEBAR MENU */
+.responsive-menu-btns {
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
   display: none;
 }
 
-label #btn, label #cancel{
-  position: absolute;
-  cursor: pointer;
-  background: #042331;
-  border-radius: 3px;
-}
-
-label #btn{
-  left: 40px;
-  top:20px;
+.responsive-menu-btns i {
   font-size: 35px;
   color: white;
-  padding: 6px 12px;
-  transition: all;
-  z-index: 100;
-  display: none;
+  float:left;
+  line-height: 80px;
+  margin-left: 20px;
+  cursor:pointer;
 }
 
-  label #cancel{
-    position: fixed;
-    z-index: 11111;
-    left: -195px;
-    top:5px;
-    font-size:20px;
-    color:white;
-    padding: 7px 10px;
-    transition: all 0.5s;
-  }
-  
- #check:checked ~ .menuBox{
-    left:0;
-  }
-  
-  #check:checked ~label #btn{
-    left:250px;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  #check:checked ~label #cancel{
-    left: 210px;
-  }
-  
-  .A a i{
-    font-size: 30px;
-  }
-  
-  .A a i:hover{
-    color:whitesmoke;
-  }
-  
-  ul .A{
-    padding-right: 20px;
-    margin: 0px;
-  }
-  
-  .A{
-    padding-right: 0;
-    margin-right: 5px
-  }
-   
-  /* ONEPAGE.HTML STARTS HERE*/
-  
-  .navTab {
-    display: flex;
-    z-index: 1000;
-    margin: 1rem 20% 0 20%;
-    align-content: center;
-    position: fixed;
-    top: 5%;
-  }
-  
-  .navTab span {
-    outline: none;
-    padding: 10px 16px;
-    cursor: pointer;
-    font-size: 22px;
-    color: #f1f1f1;
-    margin-right: 5px;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-  }
-  
-  .navTab span:hover {
-    background-color: rgba(221, 230, 217, 0.4);
-  }
-  
-  .navTab span.active {
-    border-bottom: #fff solid;
-  }
-  
-  .tag_right{
-    float: right;
-    position: top;
-  }
 
-  
-  /*Sunday school handle for toggle and navigation*/
-  .sunday{
-    padding-left: 20px;
-    display: none;
-  }
-  
-  .batch{
-    padding-left: 20px;
-    display: none;
-  }
-  .payment{
-    margin-left: 25px;
-    display: none;
-  }
-  
-  .zone{
-    display: none;
-  }
-  
-  .parish{
-    display: none;
-  }
-  
-  .area{
-    display: none;
-  }
-  
-  .region{
-    display: none;
-  }
-  
-  .region li div:hover {
-    font-size: large;
-  }
-  
 
-  /*ABOUT.HTML CONTENT*/
-  .About{
-    font-size: 25px;
-    padding: 15px 4px;
-    color: white;
-    line-height: 1;
-    text-align: justify;
+@media (max-width:880px) {
+  .bodyBox {
+    background: rgba(17, 16, 16, 0.9);
+    width: 60%;
+    height: 100%;
+    margin: 0;
+    transition: 3s all;
+    -webkit-transition: 3s all;
+    -moz-transition: 3s all;
+    -ms-transition: 3s all;
+    -o-transition: 3s all;
+    z-index: 1111;
+    /* position: fixed; */
+    top: 0;
+    /* display: none; */
   }
   
-  .About strong{
-    color: white;
-    font-weight: bolder;
-    font-size: 25px;
-    word-spacing: 6px;
-  }
-  .cool{
-    color: rgb(21, 32, 192);
-    font-size: 10px;
-  }
-  
-  .cool:hover{
-    cursor: pointer;
-    color:hotpink;
-  }
-  .ishola{
-    border-radius: 4px;
-    display: none;
-  }
-  
-  hr{
-    width: 50%;
-    margin: 0% 0% 25% 25%;
-  }
-  .updating {
-      margin-top: 100px;
-      font-size: 10em;
-      padding: 10px;
-      color: white;
-      text-align: center;
-    }
-  
-  
-  
-  i {
-    padding: 5px;
+  .mainMenu ul li a {
+    /* padding: 10px; */
+    font-size: 16px;
     color:#fff;
-    font-size:15px;
-    align-items:center;
+    font-weight: bold;
+    display: block;
   }
- 
+
+  .responsive-menu-btns {
+    display: block;
+  }
+
+  .responsive-menu-btns #cancel {
+    display: none;
+  }
+
+  ul li {
+    margin-left: 10px;
+    display: block;
+    /* width: 100%; */
+  }
+
+  #menuLine {
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    display: block;
+  }
+}
+
+
   .boxImage h3 {
     color: #fff;
     text-align: center;
