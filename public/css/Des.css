@@ -60,6 +60,10 @@ ul li {
   -o-border-radius: 4px;
 }
 
+.mainMenu ul li a #iconBtn {
+  display: none;
+}
+
 ul li.active{
   background-color: rgba(76, 103, 134, 0.5);
 }
@@ -136,6 +140,10 @@ ul li.active{
     font-size: 16px;
     color:#fff;
     font-weight: bold;
+    display: block;
+  }
+
+  .mainMenu ul li a #iconBtn {
     display: block;
   }
 
