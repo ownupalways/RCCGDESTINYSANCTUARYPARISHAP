@@ -7,7 +7,6 @@
         <meta name="Author" content="Oluwadipe Godwin Jesuropo">
         <title><%= title %></title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <link rel="stylesheet" href="css/Des.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/testimony.css">
@@ -15,22 +14,13 @@
         <link rel="stylesheet" href="css/contact.css">
         <link rel="stylesheet" href="css/gallery.css">
         <link rel="stylesheet" href="css/offerings.css">
-    </head>
-
-    <body class="bodyAll">
-        <div>
-            <%- include('../partials/header.ejs') %>
-           <main> <%- body %></main>
-            <%- include('../partials/footer.ejs') %>
-        </div>
-
-       
-    
         <script src="js/men.js" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        
+    </head>
 
-        
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main> <%- body %></main>
+        <%- include('../partials/footer.ejs') %>
     </body>
-    <!-- <script src="js/Des.js" defer></script> -->
 </html>

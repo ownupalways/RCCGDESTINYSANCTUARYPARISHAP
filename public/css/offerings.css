@@ -1,8 +1,8 @@
 .offering-container {
-    margin-top: 7rem;
-    height: 100vh;
+    /* margin-top: 7rem;
+    height: 100vh; */
     background-color: rgb(233, 10, 10);
-    z-index: -11;
+    /* z-index: -11; */
 }
 
 .card-carrier {

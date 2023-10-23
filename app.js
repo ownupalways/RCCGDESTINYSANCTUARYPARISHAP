@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // SET VIEW TEMPLATE ENGINE*********
 app.use(expressLayouts)
-app.set('layout', './layouts/full-width')
+app.set('layout', './layouts/full-width.ejs')
 app.set('views', './views')
 app.set('view engine', 'ejs')
 

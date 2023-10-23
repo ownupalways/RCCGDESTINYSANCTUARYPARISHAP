@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
     res.render('index', {title:'RCCG|Destiny Sanctuary Parish-Home'})
 })
 
-
 router.get('/about', (req, res) => {
     res.render('about', {title:'RCCG|DS-About'})
 })

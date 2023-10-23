@@ -4,30 +4,24 @@
     padding: 0;
     margin:0;
     font-size: 14px;
-    color: #000;
     list-style: none;
     text-decoration: none;
     user-select: none;
+    font-size: calc(15px + 0.00390625vw);
   }
 
-.bodyAll {
-    background-color: #000;
-  }
-   
 /* HEADER STYLING */
-  .bodyBox{
-    background: rgba(17, 16, 16, 0.9);
-    width: 100%;
-    height: 100px;
-    margin: 0;
-    transition: 1s all;
-    -webkit-transition: 1s all;
-    -moz-transition: 1s all;
-    -ms-transition: 1s all;
-    -o-transition: 1s all;
-    z-index: 1111;
-    position: fixed;
-    top: 0;
+.header{
+  background: rgba(17, 16, 16, 0.9);
+  width: 100%;
+  height: 100px;
+  transition: 1s all;
+  -webkit-transition: 1s all;
+  -moz-transition: 1s all;
+  -ms-transition: 1s all;
+  -o-transition: 1s all;
+  position: fixed;
+  top: 0;
 }
 
 /* HEADER NAVIGATION BAR*/
@@ -76,22 +70,18 @@ ul li.active{
   display: none;
 }
 
-/* MAIN BODY STYLING */
-.main-body {
-  background-color: #000;
-}
-
   /*Logo Affair*/
 .head1{
   width: 130px;
   right:10px;
   position: fixed;
   top: 2rem;
-  z-index: 1111;
+  /* z-index: 1111; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  color: #f1f1f1;
 }
    
 .head1 .logo{
@@ -122,13 +112,11 @@ ul li.active{
     height:100px ;
     background-color: #ee0f0f;
   }
-  .bodyBox {
+  .header {
     background: rgba(17, 16, 16, 0.9);
     width: 60%;
-    height: 100%;
     margin: 0;
     transition: 1s all;
-    z-index: 1111;
     top: 0;
     left: -580px;
   }
@@ -171,11 +159,6 @@ ul li.active{
     margin-top: 8rem;
     margin-bottom: 3rem;
     display: block;
-  }
-
-   /* FOOTER LINE */
-   .footer-itemCard {
-    margin-top: 20px;
   }
 }
 
@@ -186,13 +169,12 @@ ul li.active{
     height:100px ;
     background-color: #ee0f0f;
   }
-  .bodyBox {
+  .header {
     background: rgba(17, 16, 16, 0.9);
     width: 100%;
-    height: 100%;
+    height: 100px;
     margin: 0;
     transition: 1s all;
-    z-index: 1111;
     top: 0;
     left: -580px;
   }
@@ -236,201 +218,135 @@ ul li.active{
     margin-bottom: 3rem;
     display: block;
   }
+}
 
-  /* FOOTER LINE */
-  .footer-itemCard {
-    margin-top: 20px;
-  }
+.boxImage h3 {
+  color: #fff;
+  text-align: center;
+}
 
-  .footer-closeBtn {
-    width: 40px;
-    height: 40px;
-    font-size: 25px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid white;
-    position: fixed;
-    top: 60px;
-    right: 10px;
-  }
+/*.imageCube {
+  min-width: 140px;
+  margin: 0 7px ;
+  border: 2px solid whitesmoke;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.imageCube img {
+  width: 100%;
+  height: 150px;
+}*/
+
+/*FOOTER SECTION DESIGN*/ 
+footer{
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  background-color:rgba(63, 136, 185, 0.8);
+}
+.footer-itemCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+} 
+
+.foot2{
+  color: white;
+  font-size: 1.3rem;
+  padding:10px;
+}
+
+.foot2 i{
+  padding:5px;
+  color: #f1f1f1;
+}
+
+.foot2:hover, .foot2 i:hover{
+  color:rgb(192, 191, 191);
+  cursor: pointer;
+  font-weight:bold;
+}
+
+.hed{
+  padding: 10px;
+  color: rgb(26, 21, 70);
+  font-size: 1.5rem;
+}
+
+.company{
+  padding: 10px;
+  color: rgb(9, 4, 10);
+  align-self: flex-end;
 
 }
 
+/* set a style for all button*/
 
-  .boxImage h3 {
-    color: #fff;
-    text-align: center;
-  }
-  .imageCube {
-    min-width: 140px;
-    margin: 0 7px ;
-    border: 2px solid whitesmoke;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-  }
-  
-  .imageCube img {
-    width: 100%;
-    height: 150px;
-  }
-  
-  /*FOOTER SECTION DESIGN*/
-  .footerBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: 20px;
-    width: 120px;
-    padding: 40px;
-    background-color:rgba(63, 136, 185, 0.8);
-    border-radius: 50% 5px 5px 50%;
-    cursor: pointer;
+button{
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 8px;
+}
+
+  b{
+  color: white;
   }
 
-  .footer-closeBtn {
-    width: 40px;
-    height: 40px;
-    font-size: 25px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid white;
-    position: fixed;
-    top: 140px;
-    right: 20px;
-  }
+/*Float cancel and Sign up buttons and add an equal width*/
+.cancelbtny, .btny{
+  width: 180px;
+  font-size: 15px;
+  font-weight: bolder;
+  background:transparent;
+  color: white;
+}
 
+.cancelbtnyLongin, .btnyLogin{
+  width: 120px;
+  font-size: 15px;
+  font-weight: bolder;
+  background:transparent;
+  color: white;
+}
 
-  .footerBtn:hover {
-    background: black;
-    color: white;
-    border: 1px solid white;
-  }
+.btny, .btnyLogin{
+  float:left;
+}
 
-  .footerBtn h1 {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  footer{
-    display: none;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 10px;
-    padding: 10px;
-    position: fixed;
-    bottom: -18%;
-    width:100%;
-    z-index: 111111;
-    background-color:rgba(63, 136, 185, 0.8);
-    transition: .8s;
-    -webkit-transition: .8s;
-    -moz-transition: .8s;
-    -ms-transition: .8s;
-    -o-transition: .8s;
-  }
-  
-  footer:hover {
-    bottom: 0;
-  }
-  
-  
-  .foot2{
-    color: white;
-    font-size: 1.3rem;
-    padding:10px;
-  }
-  
-  .foot2 i{
-    padding:5px;
-    color: #f1f1f1;
-  }
-  
-  .foot2:hover, .foot2 i:hover{
-    color:rgb(192, 191, 191);
-    cursor: pointer;
-    font-weight:bold;
-  }
-  
-  .hed{
-    color: rgb(26, 21, 70);
-    font-size: 1.5rem;
-    outline: #ccc;
-  }
-  
-  .company{
-    color: rgb(9, 4, 10);
-    align-self: flex-end;
-  
-  }
-  
-  /* set a style for all button*/
-  
-  button{
-    color: black;
-    padding: 14px 20px;
-    margin: 8px 0;
-    cursor: pointer;
-    width: 50%;
-    border-radius: 8px;
-  }
-  
-   b{
-    color: white;
-   }
-  
-  /*Float cancel and Sign up buttons and add an equal width*/
-  .cancelbtny, .btny{
-    width: 180px;
-    font-size: 15px;
-    font-weight: bolder;
-    background:transparent;
-    color: white;
-  }
-  
-  .cancelbtnyLongin, .btnyLogin{
-    width: 120px;
-    font-size: 15px;
-    font-weight: bolder;
-    background:transparent;
-    color: white;
-  }
+.cancelbtny, .cancelbtnyLongin{
+  float: right;
+}
 
-  .btny, .btnyLogin{
-    float:left;
-  }
+.btnyLogin:hover{
+  background-color: rgb(8, 151, 8);
+  color: white;
+}
 
-  .cancelbtny, .cancelbtnyLongin{
-    float: right;
-  }
-  
-  .btnyLogin:hover{
-    background-color: rgb(8, 151, 8);
-    color: white;
-  }
+.btny:hover {
+  background-color: rgb(8, 151, 8);
+  color: white;
+}
 
-  .btny:hover {
-    background-color: rgb(8, 151, 8);
-    color: white;
-  }
+.cancelbtnyLongin:hover{
+  background-color:#ee0f0f;
+  color: white;
+  border: white 2px solid;
+}
 
-  .cancelbtnyLongin:hover{
-    background-color:#ee0f0f;
-    color: white;
-    border: white 2px solid;
-  }
+.cancelbtny:hover{
+  background-color: #ee0f0f;
+  color: white;
+}
 
-  .cancelbtny:hover{
-    background-color: #ee0f0f;
-    color: white;
-  }
-
-  .clearfix{
-    padding-right: 10px;
-  }
+.clearfix{
+  padding-right: 10px;
+}
 
