@@ -1,18 +1,35 @@
 /* INDEX SERVICE DISPLAY CARDS */
 
-/* .index-container {
-  height: 100vh;
-  z-index: 0;
-} */
-.service {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+.index-container {
+  background: black;
+ padding-bottom: 25px;
+}
+
+.navTabContent {
+  display: flex;
   justify-content: center;
-  height: 50px;
-  padding: 30px 0;
+  align-items: center;
+  
+}
+
+.programmes {
+  width: 800px;
+  margin: 8rem;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 300px));
+  justify-content: center;
+  gap: 20px;
+  transition: 1s all;
+}
+.service {
+  width: 100%;
+  text-justify: center;
+  padding: 15px 8px;
   background-color: rgba(61, 60, 60, 0.2);
   color:white;
   font-weight: bolder;
+  font-size: .8rem;
   border-radius: 35px;
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
@@ -131,23 +148,29 @@ color: black;
     width: 500px;
     margin-right: 8px;
     border-radius: 8px;
+    /* background: white; */
   }
   .boxImage a h3 {
-    color: black;
+    position: sticky;
+    background: rgba(12, 12, 12, 0.5);
+    color: white;
     text-align: center;
-    padding: 5px;
+    padding: 10px 5px;
     font-size: .8rem;
+    border-radius: 8px 8px 0 0;
+    z-index: 1;
   }
   
 
-  .imageContainer .boxImage .imageBox {
+  /* .imageContainer .boxImage .imageBox {
     width: 100%;
     border-radius: 0 0 8px 8px;
     
-  }
+  } */
 
   .imageContainer .boxImage img {
-    width: 130px;
+    width: 100px;
+    border-radius: 8px;
     
   }
 
@@ -160,3 +183,13 @@ color: black;
    width: 5px;
   }
   
+@media (max-width:880px) {
+  .programmes {
+    margin: -1.2rem 4rem;
+    /* padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+    
+  }
+}
