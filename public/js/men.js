@@ -3,8 +3,6 @@ let services = document.getElementsByClassName('service')
 
 for (let i = 0; i < services.length; i++) {
     let currentService = services[i]
-
-    console.log(currentService)
     
     currentService.addEventListener('click', (event)=> {
         let  serviceBtn = event.target
@@ -110,7 +108,7 @@ $('form').on('submit', (e) => {
 // MEDIA QUERY MENU CARD/ SIDEBAR MENU
 let menuBtn = document.querySelector('#btn')
 let menuCancelBtn = document.querySelector('#cancel')
-let headerCard = document.querySelector('.bodyBox')
+let headerCard = document.querySelector('.headerBar')
 
 menuBtn.addEventListener('click', (e) => {
     let clickedBtn = e.target
@@ -122,25 +120,7 @@ menuBtn.addEventListener('click', (e) => {
 menuCancelBtn.addEventListener('click', (e) => {
     let cancelBtnclicked = e.target
     cancelBtnclicked.style.display = 'none'
-    headerCard.style.left = '-580px'
+    headerCard.style.left = '-720px'
     menuBtn.style.display = 'block'
 })
 
-
-// FOOTER DISPLAY OPERATION 
-
-let footerBtn = document.querySelector('.footerBtn')
-let footerCard = document.querySelector('#footerCard')
-
-let footerCloseBtn = document.querySelector('.footer-closeBtn')
-footerBtn.addEventListener('click', () => {
-    footerBtn.style.display = 'none'
-    footerCard.style.display = 'grid'
-})
-
-footerCloseBtn.addEventListener('click', (e) => {
-    let footerCloseBtnClicked = e.target 
-    footerCloseBtnClicked.parentElement.style.display = 'none'
-    footerBtn.style.display = 'block'
-})
-    

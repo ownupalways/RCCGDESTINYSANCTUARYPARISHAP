@@ -2,7 +2,7 @@
 
 .index-container {
   background: black;
- padding-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .navTabContent {
@@ -160,13 +160,6 @@ color: black;
     border-radius: 8px 8px 0 0;
     z-index: 1;
   }
-  
-
-  /* .imageContainer .boxImage .imageBox {
-    width: 100%;
-    border-radius: 0 0 8px 8px;
-    
-  } */
 
   .imageContainer .boxImage img {
     width: 100px;
@@ -184,12 +177,18 @@ color: black;
   }
   
 @media (max-width:880px) {
+  
   .programmes {
-    margin: -1.2rem 4rem;
-    /* padding: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; */
-    
+    margin: 6rem 1rem -1rem 1rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+    justify-content: center;
+    gap: 20px;
+    transition: 1s all;
   }
+/* 
+  .service {
+    width: 100px;
+  }   */
 }

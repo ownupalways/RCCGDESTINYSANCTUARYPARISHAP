@@ -13,6 +13,9 @@
   
 /* HEADER STYLING */
 .headerBar{
+  position: fixed;
+  top: 0;
+  /* z-index: 1; */
   background: rgba(17, 16, 16, 0.9);
   width: 100%;
   height: 120px;
@@ -21,8 +24,6 @@
   -moz-transition: 1s all;
   -ms-transition: 1s all;
   -o-transition: 1s all;
-  position: absolute;
-  top: 0;
 }
 
 /* HEADER NAVIGATION BAR*/
@@ -74,14 +75,15 @@ ul li.active{
   /*Logo Affair*/
 .head1{
   width: 130px;
-  float: right;
-  position: sticky;
-  margin-top: 1rem;
+  right:0;
+  position: absolute;
+  top: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   color: #f1f1f1;
+  z-index: 1;
 }
    
 .head1 .logo{
@@ -108,17 +110,24 @@ ul li.active{
 /* MEDIA QUERY MENU CARD/ SIDEBAR MENU */
 @media (max-width:880px) {
   .logoAndMenuResponsiveDisplay{
+    position: fixed;
+    top: 0;
     width: 100%;
     height:100px ;
     background-color: #ee0f0f;
+    z-index: 1111;
   }
   .headerBar {
+    position: fixed;
+    top: 0;
     background: rgba(17, 16, 16, 0.9);
-    width: 60%;
-    margin: 0;
+    width: 80%;
+    height: 100%;
+    margin-top: 100px;
     transition: 1s all;
     top: 0;
-    left: -580px;
+    left: -720px;
+    z-index: 1111;
   }
   
   .mainMenu ul li a {
@@ -132,7 +141,6 @@ ul li.active{
     margin-left: 0;
   }
 
-
   .mainMenu ul li a #iconBtn {
     display: block;
     margin-right: 20px;
@@ -140,7 +148,8 @@ ul li.active{
   }
 
   .responsive-menu-btns {
-    position: absolute;
+    position: fixed;
+    top: 0;
     z-index: 1111;
     display: block;
   }
@@ -156,7 +165,7 @@ ul li.active{
   }
 
   #menuLine {
-    margin-top: 8rem;
+    margin-top: -15px;
     margin-bottom: 3rem;
     display: block;
   }
@@ -165,6 +174,8 @@ ul li.active{
 
 @media (max-width:300px) {
   .logoAndMenuResponsiveDisplay{
+    position: fixed;
+    top: 0;
     width: 100%;
     height:100px ;
     background-color: #ee0f0f;
@@ -172,8 +183,8 @@ ul li.active{
   .headerBar {
     background: rgba(17, 16, 16, 0.9);
     width: 100%;
-    height: 100px;
-    margin: 0;
+    height: 100%;
+    margin-top: 100px;
     transition: 1s all;
     top: 0;
     left: -580px;
@@ -199,7 +210,7 @@ ul li.active{
 
   .responsive-menu-btns {
     position: absolute;
-    z-index: 1111;
+    z-index: 11111;
     display: block;
   }
 
@@ -214,7 +225,7 @@ ul li.active{
   }
 
   #menuLine {
-    margin-top: 8rem;
+    margin-top: -15px;
     margin-bottom: 3rem;
     display: block;
   }
@@ -254,21 +265,27 @@ footer{
   gap: 10px;
 } 
 
+.footer-item li {
+  border-radius: 4px;
+}
+
+.footer-item li:hover .foot2 {
+  box-shadow: 2px 2px 2px 1px black;
+  cursor: pointer;
+  color:rgb(12, 2, 2);
+  border-radius: 4px;
+}
+
 .foot2{
   color: white;
   font-size: 1.3rem;
   padding:10px;
+  display: flex; 
 }
 
 .foot2 i{
   padding:5px;
   color: #f1f1f1;
-}
-
-.foot2:hover, .foot2 i:hover{
-  color:rgb(192, 191, 191);
-  cursor: pointer;
-  font-weight:bold;
 }
 
 .hed{
