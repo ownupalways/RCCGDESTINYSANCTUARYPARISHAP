@@ -9,7 +9,21 @@
     user-select: none;
     font-size: calc(15px + 0.00390625vw);
   }
-
+  
+ ::-webkit-scrollbar {
+    width:7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+   background: white;
+   height: 40px;
+   border-radius: 50px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background:#ccc;
+    border-radius: 50px;
+   }
   
 /* HEADER STYLING */
 .headerBar{
@@ -76,7 +90,7 @@ ul li.active{
 .head1{
   width: 130px;
   right:0;
-  position: absolute;
+  position: fixed;
   top: 1rem;
   display: flex;
   flex-wrap: wrap;

@@ -1,12 +1,16 @@
 .offering-container {
-    /* margin-top: 7rem;
-    height: 100vh; */
-    background-color: rgb(233, 10, 10);
-    /* z-index: -11; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 100%;
 }
 
 .card-carrier {
-    margin: 20px;
+  width: 60%;
+  margin: 0 2rem;
+  padding: 11rem 0;
 }
 
 .title{
@@ -14,59 +18,36 @@
   font-size: 25px;
   text-align: center;
   line-height: 1.5;
+  padding-bottom: 1rem;
 }
 
 .card {
-    width: 950px;
-    height: 440px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    justify-content: center;
     border-radius: 1em;
-    background-color: rgba(240, 248, 255, 0.5);
-    color: dimgray;
-    display: flex;
-    gap: 1.6rem;
-    flex-wrap: wrap;
-    padding: 20px;
+    gap: 10px;
+    margin-bottom: 0;
   }
   
   .moneyBox {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
-    font-weight: bold;
-    background-color: white;
-    color:green;
+    height: 100px;
+    font-size: 1rem;
+    font-weight: bold; 
+    background-color: rgb(182, 155, 155, 0.5);
+    color:white;
     border:1.5px solid lightgreen;
     border-radius: 4px;
-    width: 210px;
-    height: 115px;
-    padding: 5px;
+    padding:10px;
   }
 
   .moneyBox:hover {
     background: green;
     color: white;
   }
-  
+    
 
-  
-  
-  .in:hover a{
-    color: white;
-    font-size: 15px;
-    font-weight: 40px;
-  }
-  
-  .tithe:hover {
-    background: green;
-  }
-  
-  .welfare:hover {
-    background-color: green;
-  }
-  
-  .donation:hover {
-    background: green;
-  }
     

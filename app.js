@@ -3,7 +3,6 @@ const sendMail = require('./mail')
 const expressLayouts = require('express-ejs-layouts')
 
 const path = require('path')
-// const dotenv = require('dotenv')
 
 require('dotenv').config()
 
