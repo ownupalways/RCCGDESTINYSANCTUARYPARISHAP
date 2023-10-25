@@ -12,8 +12,6 @@ for (let i = 0; i < services.length; i++) {
 }
 
 
-
-
 let closePanel = document.getElementsByClassName('close-panel')
 
 
@@ -122,5 +120,52 @@ menuCancelBtn.addEventListener('click', (e) => {
     cancelBtnclicked.style.display = 'none'
     headerCard.style.left = '-720px'
     menuBtn.style.display = 'block'
+})
+
+// GALLERY OPERATIONS HERE
+// GALLERY SWITCH
+let photoCardBtn = document.querySelector('.photoCard')
+let videoCardBtn = document.querySelector('.videoCard')
+
+let photoBoxDisplay = document.querySelector('.photoShop')
+let videoBoxDisplay =  document.querySelector('.video-gallery')
+
+videoCardBtn.addEventListener('click', ()=> {
+    videoBoxDisplay.style.display = "block"
+    photoBoxDisplay.style.display = "none"
+})
+
+photoCardBtn.addEventListener('click', ()=> {
+    photoBoxDisplay.style.display = "block"
+    videoBoxDisplay.style.display = "none"
+})
+// PHOTO GALLERY INTERRACTION
+function imageBtn(theImage) {
+    let toBeExpandedImage = document.getElementById('expandedImg')
+    let imageText = document.getElementById('img-text')
+
+    toBeExpandedImage.src = theImage.src
+
+    imageText.innerHTML = theImage.alt
+
+    toBeExpandedImage.parentElement.style.display = "block"
+}
+// VIDEO GALLRY INTERRACTION 
+let videoPlayList = document.querySelectorAll('.video-playList .current-video')
+let mainVideoDisplay = document.querySelector('.main-video-display video')
+let title = document.querySelector('.main-video-display .tag')
+
+videoPlayList.forEach(video => {
+    video.onclick = () => {
+        videoPlayList.forEach(currentVideo => currentVideo.classList.remove('active'))
+        video.classList.add('active')
+        if (video.classList.contains('active')) {
+            let src = video.children[0].getAttribute('src')
+            mainVideoDisplay.src = src
+
+            let text = video.children[1].innerHTML
+            title.innerHTML = text
+        }
+    }
 })
 

@@ -2,20 +2,20 @@
 
 .index-container {
   background: black;
-  padding-bottom: 25px;
+  padding-bottom: 2px;
 }
 
 .navTabContent {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  padding: 0;
 }
 
 .programmes {
   width: 800px;
-  margin: 8rem;
-  padding: 50px;
+  margin: 8rem 8rem 2rem 8rem;
+  padding: 50px 50px 0 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 300px));
   justify-content: center;
@@ -38,7 +38,15 @@
   border: 2px whitesmoke solid;
 }
 
+.donation-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
 
+.donation {
+  width: 300px;
+}
 /* Modal Boxes */
 
 .panel {

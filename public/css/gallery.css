@@ -1,4 +1,4 @@
-.gallery {
+#gallery {
     text-transform: capitalize;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: normal;
@@ -7,9 +7,10 @@
 
 /* VIDEO GALLERY STYLING STARTS HERE */
 .video-gallery {
-    width:50%;
+    width:80%;
     margin: 0 auto;
-    display: grid;
+    display: none;
+    /* display: grid; */
 }
 
 .video-container {
@@ -130,8 +131,36 @@
     }
     
 }
-/* PHOTO GALLERY STARTS HERE */
 
+@media(max-width:300px) {
+    .video-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* .video-gallery {
+        margin: 1rem;
+    } */
+
+    .video-container .video-playList {
+       width: 100%;
+       padding: 0;
+       margin: 0;
+    }
+
+    .video-playList .current-video .tag {
+        font-size: 0.750rem;
+    }
+    
+}
+/* PHOTO GALLERY STARTS HERE */
+.photoShop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s all;
+    background: blue;
+    width: 50%;
+}
 /* The grid: Four equal columns that floats next to each other */
  .photo-card {
   float: left;
@@ -155,10 +184,9 @@
   -o-border-radius: 8px;
 }
 
-/* Clear floats after the columns */
 .photoBox {
     width: 50%;
-    display: none;
+    display: grid;
     grid-template-columns: 280px 1fr;
     margin: 0 auto;
 }
@@ -234,12 +262,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
+    gap: 4rem;
+    margin-bottom: 2rem;
 }
 .galleryCard {
-    color: #efefef;
+    max-width: 250px;
+    color: black;
     font-size: 25px;
     cursor: pointer;
+    outline: none;
+}
+.galleryCard:hover {
+    background:rgba(0,0,0,.5);
+    color: white;
 }
 
 
