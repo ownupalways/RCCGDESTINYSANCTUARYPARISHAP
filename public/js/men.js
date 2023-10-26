@@ -130,12 +130,12 @@ let videoCardBtn = document.querySelector('.videoCard')
 let photoBoxDisplay = document.querySelector('.photoShop')
 let videoBoxDisplay =  document.querySelector('.video-gallery')
 
-videoCardBtn.addEventListener('click', ()=> {
+videoCardBtn.addEventListener('click', () => {
     videoBoxDisplay.style.display = "block"
     photoBoxDisplay.style.display = "none"
 })
 
-photoCardBtn.addEventListener('click', ()=> {
+photoCardBtn.addEventListener('click', () => {
     photoBoxDisplay.style.display = "block"
     videoBoxDisplay.style.display = "none"
 })
@@ -143,15 +143,51 @@ photoCardBtn.addEventListener('click', ()=> {
 function imageBtn(theImage) {
     let toBeExpandedImage = document.getElementById('expandedImg')
     let imageText = document.getElementById('img-text')
-
     toBeExpandedImage.src = theImage.src
 
     imageText.innerHTML = theImage.alt
 
     toBeExpandedImage.parentElement.style.display = "block"
 }
+
+// wWINDOW SCROLL FOR PHOTO
+let imageScrollBtnToTopView = document.querySelectorAll('.photo-card')
+
+
+
+function scrollBtn() {
+
+    for (let i = 0; i < imageScrollBtnToTopView.length; i++) {
+        const currentImage = imageScrollBtnToTopView[i];
+    
+        currentImage.addEventListener('click', () => {
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.body.scrollTop ="0";
+        
+               document.documentElement.scrollTop = "0"
+    
+               document.documentElement.style.transition = "2s all"
+            } else {
+                document.body.scrollTop ="0";
+        
+                document.documentElement.scrollTop = "0"
+            }
+        })
+    }
+}
+
+window.onscroll = function() {
+
+    scrollBtn()
+}
+
+
+
 // VIDEO GALLRY INTERRACTION 
 let videoPlayList = document.querySelectorAll('.video-playList .current-video')
+
+// var currentVideo = document.querySelectorAll('.current-video')
+
 let mainVideoDisplay = document.querySelector('.main-video-display video')
 let title = document.querySelector('.main-video-display .tag')
 
