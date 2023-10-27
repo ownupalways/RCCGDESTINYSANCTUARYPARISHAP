@@ -39,6 +39,7 @@
   -moz-transition: 1s all;
   -ms-transition: 1s all;
   -o-transition: 1s all;
+  z-index: 11;
 }
 
 /* HEADER NAVIGATION BAR*/

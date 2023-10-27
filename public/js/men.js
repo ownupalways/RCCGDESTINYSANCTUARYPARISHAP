@@ -126,7 +126,7 @@ menuCancelBtn.addEventListener('click', (e) => {
 // GALLERY SWITCH
 let photoCardBtn = document.querySelector('.photoCard')
 let videoCardBtn = document.querySelector('.videoCard')
-
+// console.log(videoCardBtn)
 let photoBoxDisplay = document.querySelector('.photoShop')
 let videoBoxDisplay =  document.querySelector('.video-gallery')
 
@@ -139,7 +139,10 @@ photoCardBtn.addEventListener('click', () => {
     photoBoxDisplay.style.display = "block"
     videoBoxDisplay.style.display = "none"
 })
+
 // PHOTO GALLERY INTERRACTION
+
+let photoShopAll = document.querySelector('.photoShop')
 function imageBtn(theImage) {
     let toBeExpandedImage = document.getElementById('expandedImg')
     let imageText = document.getElementById('img-text')
@@ -147,9 +150,37 @@ function imageBtn(theImage) {
 
     imageText.innerHTML = theImage.alt
 
-    toBeExpandedImage.parentElement.style.display = "block"
+    // toBeExpandedImage.parentElement.style.display = "block"
+    toBeExpandedImage.parentElement.style.bottom = "-0"
+    photoShopAll.style.paddingTop =  "8rem"
+    toBeExpandedImage.parentElement.style.transition = "2s all"
 }
 
+let PhotoDisplayContainerCloseBtn = document.querySelector('.close-btn')
+
+PhotoDisplayContainerCloseBtn.addEventListener('click', (e)=> {
+ let btnClicked = e.target
+ btnClicked.parentElement.style.display = "none"
+ photoShopAll.style.paddingTop =  "18rem"
+ separateGalleryBtns.style.paddingTop = "7rem"
+})
+
+// APPEARANCE BETWEEN GALLERY BUTTONS AND PHOTO DISPLAY CONTAINER
+
+let PhotoDisplayContainer = document.querySelector('.photo-display-container')
+console.log(PhotoDisplayContainer)
+
+let photoGalleryDisplay = document.querySelectorAll('.photo-gallery-display .photo-card')
+console.log(photoGalleryDisplay)
+
+let separateGalleryBtns = document.querySelector('.separate-galleryBtn')
+console.log(separateGalleryBtns)
+
+photoGalleryDisplay.forEach(photoCard => {
+    photoCard.addEventListener('click', () => {
+        separateGalleryBtns.style.paddingTop = "0rem"
+    })
+})
 // wWINDOW SCROLL FOR PHOTO
 let imageScrollBtnToTopView = document.querySelectorAll('.photo-card')
 

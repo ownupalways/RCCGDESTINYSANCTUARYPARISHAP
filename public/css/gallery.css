@@ -5,7 +5,6 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: normal;
     background: black;
-    z-index: -1111;
 }
 
 /* VIDEO GALLERY STYLING STARTS HERE */
@@ -120,10 +119,18 @@
     color: #fff;
 }
 
-@media(max-width:991px) {
+.photoShop {
+    container-type: inline-size;
+}
+
+@container (max-width:991px) {
     .video-container {
         grid-template-columns: 2fr 1fr;
         padding: 10px;
+    }
+
+    .photo-display-container {
+        width:100%;
     }
     
 }
@@ -133,6 +140,34 @@
         grid-template-columns: 1fr;
     }
     
+
+    #img-text {
+        font-size: .8rem;
+        padding: 4px;
+    }
+    
+    /* Closable button inside the expanded image */
+    .close-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+        border: 1px solid white;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
 }
 
 @media(max-width:300px) {
@@ -157,8 +192,16 @@
 }
 
 /* PHOTO GALLERY STARTS HERE */
-.gallery-separation h1 {
-    padding: 60px 0;
+.separate-galleryBtn {
+    position: fixed;
+    width: 100%;
+    background: rgba(175, 17, 17, 0.8);
+   transition: 2s all;
+    padding:7rem 0 0 0;
+    margin-top: 1rem; 
+    z-index: 1;  
+}
+.separate-galleryBtn  h1 {
     color: #fff;
     font-size: 44px;
     text-align: center;
@@ -166,15 +209,20 @@
 
 /* The expanding image container */
 .photoShop {
-    width: 100%;
+    /* height: 150vh;
+    overflow-y: scroll;
+    width: 100%; */
     display: block;
     transition: 2s all;
-    padding: 20px;
+    padding-top: 18rem;
+    /* z-index: -1; */
 }
 
 .photo-display-container {
     position: relative;
-    display: none;
+    /* display: none; */
+    bottom: -350px;
+    transition: 5s all;
     width: 50%;
     translate: 50%;
     margin-bottom: 3rem;
@@ -220,7 +268,9 @@
 
 /* Expanding image text */
 #img-text {
-  position: relative;
+    display: grid;
+
+  position: absolute;
   bottom: 15px;
   left: 15px;
   color: white;
@@ -267,7 +317,7 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: .4rem;
 }
 .galleryCardBtn {
     max-width: 200px;
