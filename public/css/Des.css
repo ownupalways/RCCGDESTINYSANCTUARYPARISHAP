@@ -1,30 +1,58 @@
 
 *{
-    box-sizing: border-box;
-    padding: 0;
-    margin:0;
-    font-size: 14px;
-    list-style: none;
-    text-decoration: none;
-    user-select: none;
-    font-size: calc(15px + 0.00390625vw);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+  font-size: 14px;
+  list-style: none;
+  text-decoration: none;
+  user-select: none;
+  font-size: calc(15px + 0.00390625vw);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.ultimate-container{
+  container-type: inline-size;
+}
+
+.ultimte {
+ overflow: hidden;
+ height: 100%;
+}
+
+
+
+@container (max-width:500px) {
+  .headerBar {
+    width:100%;
   }
   
- ::-webkit-scrollbar {
-    width:7px;
+  main {
+    width:100%;
   }
-  
-  ::-webkit-scrollbar-track {
-   background: white;
-   height: 40px;
-   border-radius: 50px;
+
+  footer {
+    width:100%;
   }
-  
-  ::-webkit-scrollbar-thumb {
-    background:#ccc;
-    border-radius: 50px;
-   }
+
+  .panel {
+    width:100%
+  }
+}
+::-webkit-scrollbar {
+  width:7px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  height: 40px;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#ccc;
+  border-radius: 50px;
+}
   
 /* HEADER STYLING */
 .headerBar{
@@ -190,10 +218,18 @@ ul li.active{
     margin-bottom: 3rem;
     display: block;
   }
+
+  .footer-item {
+    width: 100%;
+  }
 }
 
 
 @media (max-width:300px) {
+  /* * {
+    font-size: .5rem;
+  } */
+  
   .logoAndMenuResponsiveDisplay{
     position: fixed;
     top: 0;
@@ -250,6 +286,10 @@ ul li.active{
     margin-bottom: 3rem;
     display: block;
   }
+
+  .footer-item {
+    width: 100%;
+  }
 }
 
 .boxImage h3 {
@@ -260,56 +300,57 @@ ul li.active{
 /*FOOTER SECTION DESIGN*/ 
 footer{
   width: 100%;
+  height: auto;
   padding: 10px;
   bottom: 0;
-  background-color:rgba(63, 136, 185, 0.8);
+  background-color:rgba(55, 57, 58, 0.8);
 }
 
 .footer-itemCard {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+  gap: 2rem;
+  justify-content: center;
 } 
+
+.footer-item {
+  border: 1px white solid;
+  border-radius: 10px;
+}
+
+.footer-item h4 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: #ccc;
+  text-decoration: underline;
+}
 
 .footer-item-inner-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  width: 310px;
 }
 
 .footer-item-inner-container li {
-  width: 120px;
-  border-radius: 4px;
+  margin: 0.3rem 0.8rem;
+  box-shadow: 0.2rem 0.2rem 0rem;
+  width: fit-content;
+  border-radius: 8px;
+  padding: 0.8rem;
+  border: 1px black solid;
+  color: rgb(14, 13, 13);
 }
 
-.footer-item li > a i {
-  font-size: .8rem;
-}
-
-.footer-item li:hover .foot2 {
-  box-shadow: 2px 8px 2px;
-  cursor: pointer;
-  color:rgb(12, 2, 2);
-  border-radius: 4px;
-}
-
-.foot2{
+.footer-item-inner-container li>a  {
   color: white;
-  font-size: 1.3rem;
-  /* padding:10px; */
-  display: flex; 
+  font-size: 1rem;
 }
 
-.foot2 i{
-  padding:5px;
-  color: #f1f1f1;
-}
-
-.hed{
-  padding: 10px;
-  color: rgb(26, 21, 70);
-  font-size: 1.5rem;
+.footer-item-inner-container li:hover {
+  background: black;
+  cursor: pointer;
+  color:white;
+  border: 1px white solid;
 }
 
 .company{
@@ -317,70 +358,5 @@ footer{
   color: rgb(9, 4, 10);
   align-self: flex-end;
 
-}
-
-/* set a style for all button*/
-
-button{
-  color: black;
-  padding: 14px 20px;
-  margin: 8px 0;
-  cursor: pointer;
-  width: 50%;
-  border-radius: 8px;
-}
-
-  b{
-  color: white;
-  }
-
-/*Float cancel and Sign up buttons and add an equal width*/
-.cancelbtny, .btny{
-  width: 180px;
-  font-size: 15px;
-  font-weight: bolder;
-  background:transparent;
-  color: white;
-}
-
-.cancelbtnyLongin, .btnyLogin{
-  width: 120px;
-  font-size: 15px;
-  font-weight: bolder;
-  background:transparent;
-  color: white;
-}
-
-.btny, .btnyLogin{
-  float:left;
-}
-
-.cancelbtny, .cancelbtnyLongin{
-  float: right;
-}
-
-.btnyLogin:hover{
-  background-color: rgb(8, 151, 8);
-  color: white;
-}
-
-.btny:hover {
-  background-color: rgb(8, 151, 8);
-  color: white;
-}
-
-.cancelbtnyLongin:hover{
-  background-color:#ee0f0f;
-  color: white;
-  border: white 2px solid;
-}
-
-.cancelbtny:hover{
-  background-color: #ee0f0f;
-  color: white;
-}
-
-.clearfix{
-  padding-right: 10px;
 }
 

@@ -1,4 +1,4 @@
-/* INDEX SERVICE DISPLAY CARDS */
+/* INDEX CARDSSERVICE DISPLAY CARDS */
 
 .index-container {
   background: black;
@@ -91,7 +91,7 @@ width: 550px;
 height: 560px;
 display: flex;
 justify-content: space-around;
-margin: 0 auto;
+margin: auto;
 background-color: aliceblue;
 padding:10px 20px;
 border-radius: 15px;
