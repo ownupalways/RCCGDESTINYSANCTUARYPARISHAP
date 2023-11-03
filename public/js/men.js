@@ -140,8 +140,8 @@ photoCardBtn.addEventListener('click', () => {
     videoBoxDisplay.style.display = "none"
 })
 
-// PHOTO GALLERY INTERRACTION
 
+// PHOTO GALLERY INTERRACTION
 let photoShopAll = document.querySelector('.photoShop')
 function imageBtn(theImage) {
     let toBeExpandedImage = document.getElementById('expandedImg')
@@ -149,11 +149,12 @@ function imageBtn(theImage) {
     toBeExpandedImage.src = theImage.src
 
     imageText.innerHTML = theImage.alt
-
-    // toBeExpandedImage.parentElement.style.display = "block"
-    toBeExpandedImage.parentElement.style.bottom = "-0"
+   
+    toBeExpandedImage.parentElement.style.display = "block"
     photoShopAll.style.paddingTop =  "8rem"
     toBeExpandedImage.parentElement.style.transition = "2s all"
+
+    scrollBtn()
 }
 
 let PhotoDisplayContainerCloseBtn = document.querySelector('.close-btn')
@@ -165,16 +166,17 @@ PhotoDisplayContainerCloseBtn.addEventListener('click', (e)=> {
  separateGalleryBtns.style.paddingTop = "7rem"
 })
 
+
 // APPEARANCE BETWEEN GALLERY BUTTONS AND PHOTO DISPLAY CONTAINER
 
 let PhotoDisplayContainer = document.querySelector('.photo-display-container')
-console.log(PhotoDisplayContainer)
+// console.log(PhotoDisplayContainer)
 
 let photoGalleryDisplay = document.querySelectorAll('.photo-gallery-display .photo-card')
 console.log(photoGalleryDisplay)
 
 let separateGalleryBtns = document.querySelector('.separate-galleryBtn')
-console.log(separateGalleryBtns)
+// console.log(separateGalleryBtns)
 
 photoGalleryDisplay.forEach(photoCard => {
     photoCard.addEventListener('click', () => {
@@ -182,7 +184,7 @@ photoGalleryDisplay.forEach(photoCard => {
     })
 })
 // wWINDOW SCROLL FOR PHOTO
-let imageScrollBtnToTopView = document.querySelectorAll('.photo-card')
+let imageScrollBtnToTopView = document.querySelectorAll('.photo-gallery-display .photo-card')
 
 
 
@@ -192,12 +194,12 @@ function scrollBtn() {
         const currentImage = imageScrollBtnToTopView[i];
     
         currentImage.addEventListener('click', () => {
-            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+           if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 document.body.scrollTop ="0";
         
                document.documentElement.scrollTop = "0"
     
-               document.documentElement.style.transition = "2s all"
+            //    document.documentElement.style.transition = "2s all"
             } else {
                 document.body.scrollTop ="0";
         
@@ -207,10 +209,10 @@ function scrollBtn() {
     }
 }
 
-window.onscroll = function() {
+// window.onscroll = function() {
 
-    scrollBtn()
-}
+//     scrollBtn()
+// }
 
 
 

@@ -15,9 +15,9 @@
   container-type: inline-size;
 }
 
-.ultimte {
+.ultimate {
  overflow: hidden;
- height: 100%;
+ background: blue;
 }
 
 
@@ -300,9 +300,7 @@ ul li.active{
 /*FOOTER SECTION DESIGN*/ 
 footer{
   width: 100%;
-  height: auto;
   padding: 10px;
-  bottom: 0;
   background-color:rgba(55, 57, 58, 0.8);
 }
 
@@ -313,10 +311,10 @@ footer{
   justify-content: center;
 } 
 
-.footer-item {
+/* .footer-item {
   border: 1px white solid;
   border-radius: 10px;
-}
+} */
 
 .footer-item h4 {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

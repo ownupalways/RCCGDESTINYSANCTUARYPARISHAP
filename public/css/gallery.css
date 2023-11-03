@@ -12,7 +12,8 @@
     width:80%;
     margin: 0 auto;
     display: none;
-    /* display: grid; */
+    /* padding-top: 6rem;
+    display: grid; */
 }
 
 .video-container {
@@ -20,7 +21,8 @@
     grid-template-columns: 2fr 1fr;
     gap: 15px;
     align-items: flex-start;
-    padding: 5px 5%;
+    padding: 4rem 5%;
+    /* margin-top: 4rem; */
 }
 
 .video-container .main-video-display {
@@ -221,9 +223,9 @@
 
 .photo-display-container {
     position: relative;
-    /* display: none; */
-    bottom: -350px;
-    transition: 5s all;
+    display: none;
+    /* bottom: -350px; */
+    transition: 5s all ease-in;
     width: 50%;
     translate: 50%;
     margin-bottom: 3rem;
@@ -245,6 +247,7 @@
     translate: 20%;
     border: 1px white solid;
     border-radius: 5px;
+    margin-bottom: 1rem;
   }
 
 
