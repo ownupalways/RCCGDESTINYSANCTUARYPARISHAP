@@ -28,6 +28,9 @@ router.get('/gallery', (req, res) => {
     res.render('gallery', {title:'RCCG|DS-Gallery'})
 })
 
+router.get('/testimony', (req, res) => {
+    res.render('testimony', {title:'RCCG|DS-Testimony'})
+})
 
 // router.get("/testimony", (req, res, next) => {
 //     const query = "SELECT * FROM testimony_users ORDER BY id DESC"

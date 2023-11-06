@@ -124,8 +124,8 @@ menuCancelBtn.addEventListener('click', (e) => {
 
 // GALLERY OPERATIONS HERE
 // GALLERY SWITCH
-let photoCardBtn = document.querySelector('.photoCard')
-let videoCardBtn = document.querySelector('.videoCard')
+let photoCardBtn = document.getElementById('#photoCard')
+let videoCardBtn = document.getElementById('#videoCard')
 // console.log(videoCardBtn)
 let photoBoxDisplay = document.querySelector('.photoShop')
 let videoBoxDisplay =  document.querySelector('.video-gallery')
@@ -237,4 +237,35 @@ videoPlayList.forEach(video => {
         }
     }
 })
+
+// TESTIMONY COMING SOON TIMER
+
+// Set the date we're counting down to
+let countDownDate = new Date("Jan 31, 2024 15:37:25").getTime();
+
+// Update the count down every 1 second
+let countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  let now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  let distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("timeOut").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("timeOut").innerHTML = "EXPIRED";
+  }
+}, 1000);
 
