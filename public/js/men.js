@@ -124,22 +124,20 @@ menuCancelBtn.addEventListener('click', (e) => {
 
 // GALLERY OPERATIONS HERE
 // GALLERY SWITCH
-let photoCardBtn = document.getElementById('#photoCard')
-let videoCardBtn = document.getElementById('#videoCard')
 // console.log(videoCardBtn)
 let photoBoxDisplay = document.querySelector('.photoShop')
 let videoBoxDisplay =  document.querySelector('.video-gallery')
 
-videoCardBtn.addEventListener('click', () => {
-    videoBoxDisplay.style.display = "block"
-    photoBoxDisplay.style.display = "none"
-})
 
-photoCardBtn.addEventListener('click', () => {
-    photoBoxDisplay.style.display = "block"
+function photoCard() {
     videoBoxDisplay.style.display = "none"
-})
+    photoBoxDisplay.style.display = "block"
+}
 
+function videoCard() {
+    photoBoxDisplay.style.display = "none"
+    videoBoxDisplay.style.display = "block"
+}
 
 // PHOTO GALLERY INTERRACTION
 let photoShopAll = document.querySelector('.photoShop')
@@ -170,8 +168,8 @@ PhotoDisplayContainerCloseBtn.addEventListener('click', (e)=> {
 // APPEARANCE BETWEEN GALLERY BUTTONS AND PHOTO DISPLAY CONTAINER
 
 let PhotoDisplayContainer = document.querySelector('.photo-display-container')
-// console.log(PhotoDisplayContainer)
 
+// console.log(PhotoDisplayContainer)
 let photoGalleryDisplay = document.querySelectorAll('.photo-gallery-display .photo-card')
 console.log(photoGalleryDisplay)
 
