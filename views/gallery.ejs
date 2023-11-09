@@ -10,12 +10,19 @@
         <!-- PHOTO GALLERY STRUCTURE -->
         <!-- The four columns -->
     <div class="photoShop">
-        <div class="photo-display-container">
-            <span class="close-btn">&times;</span>
-            <img id="expandedImg" style="width:100%">
-            <div id="img-text"></div>
+        <div class="photo-container-box">
+            <div class="photo-display-container">
+                <span class="close-btn" onclick="CloseBtn()">&times;</span>
+                <img id="expandedImg" style="width:100%">
+                <div id="img-text"></div>
+            </div>
         </div>
-        
+        <!-- <div class="yearly-photos">
+            <button class="monthly-photos November">November - 2023</button>
+            
+            <button class="monthly-photos November">December - 2023</button>
+        </div> -->
+
         <div class="photo-gallery-display  all-photoBox">
             <div class="photo-card">
                 <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
@@ -122,82 +129,144 @@
         </div>
     </div>
 
+    <!-- NEW UPDATE OF PHOTOS -->
+    <!-- <button class="month November">November - 2023</button>
+            <div class="photo-card-montly">
+                <button class="weekly week1">Week One</button>
+                <div class="photo-card-weekly week1">
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                </div>
+                <button class="weekly week2">Week Two</button>
+                <div class="photo-card-weekly week2">
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                </div>
+                <button class="weekly week3">Week Three</button> 
+                <div class="photo-card-weekly week3">
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                </div> 
+                <button class="weekly week4">Week Four</button>
+                <div class="photo-card-weekly week4">
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                </div> 
+                <button class="weekly week5">Week Five</button>
+                <div class="photo-card-weekly week5">
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                </div>         
+            </div> -->
+
          <!-- VIDEO GALLERY STRUCTURE -->
     <div class="video-gallery">
-            <div class="video-container">
-                <div class="main-video-display">
-                    <div class="videoBox">
-                        <video src="media/redirect.mp4" controls></video>
-                        <h3 class="tag">01. family Sunday Service</h3>
-                    </div>
-                </div>
-
-                <div class="video-playList">
-                    <div class="current-video active">
-                        <video src="media/redirect.mp4" controls></video>
-                        <h3 class="tag">01. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/deletedataform.mp4"></video>
-                        <h3 class="tag">02. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/test1.mp4"></video>
-                        <h3 class="tag">03. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/fetchdata.mp4"></video>
-                        <h3 class="tag">04. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/redirect.mp4"></video>
-                        <h3 class="tag">05. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/responsivePlaylist.mp4"></video>
-                        <h3 class="tag">06. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/deletedataform.mp4"></video>
-                        <h3 class="tag">07. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/deletedataform.mp4"></video>
-                        <h3 class="tag">08. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/deletedataform.mp4"></video>
-                        <h3 class="tag">09. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/deletedataform.mp4"></video>
-                        <h3 class="tag">10. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/deletedataform.mp4"></video>
-                        <h3 class="tag">11. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/deletedataform.mp4"></video>
-                        <h3 class="tag">12. family Sunday Service</h3>
-                    </div>
-
-                    <div class="current-video">
-                        <video src="media/deletedataform.mp4"></video>
-                        <h3 class="tag">13. family Sunday Service</h3>
-                    </div>
+        <div class="video-container">
+            <div class="main-video-display">
+                <div class="videoBox">
+                    <video src="media/redirect.mp4" controls></video>
+                    <h3 class="tag">01. family Sunday Service</h3>
                 </div>
             </div>
+
+            <div class="video-playList">
+                <div class="current-video active">
+                    <video src="media/redirect.mp4" controls></video>
+                    <h3 class="tag">01. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/deletedataform.mp4"></video>
+                    <h3 class="tag">02. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/test1.mp4"></video>
+                    <h3 class="tag">03. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/fetchdata.mp4"></video>
+                    <h3 class="tag">04. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/redirect.mp4"></video>
+                    <h3 class="tag">05. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/responsivePlaylist.mp4"></video>
+                    <h3 class="tag">06. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/deletedataform.mp4"></video>
+                    <h3 class="tag">07. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/deletedataform.mp4"></video>
+                    <h3 class="tag">08. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/deletedataform.mp4"></video>
+                    <h3 class="tag">09. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/deletedataform.mp4"></video>
+                    <h3 class="tag">10. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/deletedataform.mp4"></video>
+                    <h3 class="tag">11. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/deletedataform.mp4"></video>
+                    <h3 class="tag">12. family Sunday Service</h3>
+                </div>
+
+                <div class="current-video">
+                    <video src="media/deletedataform.mp4"></video>
+                    <h3 class="tag">13. family Sunday Service</h3>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

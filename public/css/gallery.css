@@ -1,10 +1,11 @@
 #gallery {
-    width: 100%;
-    height: fit-content;
+    /* width: 100%;
+    height:80vh; */
     text-transform: capitalize;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: normal;
     background: black;
+    padding-bottom: 10px;
 }
 
 /* VIDEO GALLERY STYLING STARTS HERE */
@@ -118,20 +119,16 @@
     color: #fff;
 }
 
-.photoShop {
-    container-type: inline-size;
-}
 
 @media (max-width:991px) {
+    #gallery{
+        height: 100%;
+    }
     .video-container {
         grid-template-columns: 1fr 1fr;
         padding: 16.5rem 5% 4rem 5%;
     }
 
-    .photo-display-container {
-        width:100%;
-    }
-    
 }
 
 @media(max-width:768px) {
@@ -146,39 +143,13 @@
         padding: 4px;
     }
     
-    /* Closable button inside the expanded image */
-    .close-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: black;
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        padding: 10px;
-        top: 10px;
-        right: 15px;
-        color: white;
-        font-size: 25px;
-        cursor: pointer;
-        border: 1px solid white;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-    }
-}
+ }
 
 @media(max-width:300px) {
     .video-container {
         grid-template-columns:1fr;
         padding: 18.5rem 5% 4rem 5%;
     }
-
-    /* .video-gallery {
-        margin: 1rem;
-    } */
 
     .video-container .video-playList {
        width: 100%;
@@ -189,7 +160,6 @@
     .video-playList .current-video .tag {
         font-size: 0.750rem;
     }
-    
 }
 
 /* PHOTO GALLERY STARTS HERE */
@@ -211,22 +181,20 @@
 
 /* The expanding image container */
 .photoShop {
-    /* height: 150vh;
-    overflow-y: scroll;
-    width: 100%; */
     display: block;
     transition: 2s all;
     padding-top: 18rem;
-    /* z-index: -1; */
 }
 
+.photo-container-box {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 800px));
+    justify-content: center;
+}
 .photo-display-container {
     position: relative;
-    display: none;
-    transition: transform 5s all ease-in;
-    width: 50%;
-    translate: 50%;
-    margin-bottom: 3rem;
+    transition: 5s all ease-out;
+    margin: 2rem;
     border: 3px solid white;
     border-radius: 12px;
     -webkit-border-radius: 12px;
@@ -234,6 +202,25 @@
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
 }
+
+/* .yearly-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 800px));
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.monthly-photos {
+    margin:0 20px;
+    width: 100%;
+    text-align: left;
+    padding: 18px;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    font-size: 15vw;
+} */
   
   .photo-gallery-display {
     display: grid;
@@ -250,6 +237,11 @@
 
 
 /* Style the images inside the grid */
+.photo-card {
+    margin: auto;
+}
+
+
 
 .photo-card .myImage {
   opacity: 1; 
@@ -271,18 +263,16 @@
 
 /* Expanding image text */
 #img-text {
-    display: grid;
-
+  /* display: grid; */
   position: absolute;
   bottom: 15px;
   left: 15px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 3vw;
   background: rgba(0,0,0,.8);
   padding: 8px;
   border: 1px white solid;
   border-radius: 6px;
-
 }
 
 /* Closable button inside the expanded image */
@@ -298,7 +288,7 @@
     top: 10px;
     right: 15px;
     color: white;
-    font-size: 25px;
+    font-size: 15px;
     cursor: pointer;
     border: 1px solid white;
     border-radius: 50%;
@@ -322,6 +312,8 @@
     gap: 4rem;
     margin-bottom: .4rem;
 }
+
+
 .galleryCardBtn {
     max-width: 200px;
     color: black;

@@ -2,8 +2,8 @@
   position: relative;
   height: 100%;
   width: 100%;
-  overflow: hidden;
-  margin-top: 8rem;
+  padding-top: 7rem;
+ overflow: hidden;
 }
 
 .soon-container img {
@@ -12,17 +12,31 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: fill;
+}
+.top-soon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  background: rgba(176, 135, 241, 0.3);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 .comin-soon {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform:translate(-50%, -50%) ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .comin-soon  h1 {
   color: #f1f1f1;
-  font-size: 5rem;
+  font-size: 5vw;
+  margin-bottom: 3rem;
 }
 .comin-soon hr {
   margin: auto;
@@ -30,8 +44,17 @@
   border: 2px white solid;
   border-radius: 10px;
 }
+.comin-soon p {
+  font-size:8vw; 
+  color: aliceblue; 
+  background: rgba(212, 0, 255, 0.4); 
+  border-radius: 10px; 
+  text-align: center; 
+  padding: 4vw 2vw; 
+  font-family: 'Times New Roman', Times, serif;
+}
 
-  
+
   .TestimonyBtn {
     width:100%;
     height: 40%;
@@ -71,7 +94,7 @@
   .testimonyMessage {
     align-self: center;
     width: -moz-available;
-    font-size: 10px;
+    font-size: 10vw;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -121,10 +144,10 @@
     }
     
     .thanksgiving .cutoff-text {
-      font-size: 18px;
+      font-size: 18vw;
     }
     .HeadingNote {
-      font-size: 20px;
+      font-size: 20vw;
       padding-bottom: 8px;
       color:white;
     }

@@ -148,30 +148,27 @@ function imageBtn(theImage) {
 
     imageText.innerHTML = theImage.alt
    
-    toBeExpandedImage.parentElement.style.display = "block"
+    toBeExpandedImage.parentElement.parentElement.style.display = "grid"
     photoShopAll.style.paddingTop =  "8rem"
-    toBeExpandedImage.parentElement.style.transition = "2s all"
+    toBeExpandedImage.parentElement.parentElement.style.transition = "2s all"
 
     scrollBtn()
 }
 
-let PhotoDisplayContainerCloseBtn = document.querySelector('.close-btn')
-
-PhotoDisplayContainerCloseBtn.addEventListener('click', (e)=> {
- let btnClicked = e.target
- btnClicked.parentElement.style.display = "none"
- photoShopAll.style.paddingTop =  "18rem"
- separateGalleryBtns.style.paddingTop = "7rem"
-})
+function CloseBtn() {
+    let PhotoDisplayContainer = document.querySelector('.photo-container-box')
+    PhotoDisplayContainer.style.display = "none"
+    photoShopAll.style.paddingTop =  "18rem"
+    separateGalleryBtns.style.paddingTop = "7rem"
+}
 
 
 // APPEARANCE BETWEEN GALLERY BUTTONS AND PHOTO DISPLAY CONTAINER
 
-let PhotoDisplayContainer = document.querySelector('.photo-display-container')
+let PhotoDisplayContainer = document.querySelector('.photo-container-box')
 
 // console.log(PhotoDisplayContainer)
 let photoGalleryDisplay = document.querySelectorAll('.photo-gallery-display .photo-card')
-console.log(photoGalleryDisplay)
 
 let separateGalleryBtns = document.querySelector('.separate-galleryBtn')
 // console.log(separateGalleryBtns)
@@ -197,7 +194,6 @@ function scrollBtn() {
         
                document.documentElement.scrollTop = "0"
     
-            //    document.documentElement.style.transition = "2s all"
             } else {
                 document.body.scrollTop ="0";
         
@@ -206,12 +202,6 @@ function scrollBtn() {
         })
     }
 }
-
-// window.onscroll = function() {
-
-//     scrollBtn()
-// }
-
 
 
 // VIDEO GALLRY INTERRACTION 
@@ -237,33 +227,33 @@ videoPlayList.forEach(video => {
 })
 
 // TESTIMONY COMING SOON TIMER
-
 // Set the date we're counting down to
-let countDownDate = new Date("Jan 31, 2024 15:37:25").getTime();
+// var countDownDate = new Date("Jan 31, 2024 15:37:25").getTime();
 
 // Update the count down every 1 second
-let countdownfunction = setInterval(function() {
+// var countdownfunction = setInterval(function() {
 
   // Get todays date and time
-  let now = new Date().getTime();
+//   var now = new Date().getTime();
   
   // Find the distance between now an the count down date
-  let distance = countDownDate - now;
+//   var distance = countDownDate - now;
   
   // Time calculations for days, hours, minutes and seconds
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
   // Output the result in an element with id="demo"
-  document.getElementById("timeOut").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+//   var timeOut = document.querySelector("#timeOut")
+//   console.log(timeOut)
+//   timeOut.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
   
   // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("timeOut").innerHTML = "EXPIRED";
-  }
-}, 1000);
+//   if (distance < 0) {
+//     clearInterval(countdownfunction);
+//     document.querySelector("#timeOut").innerHTML = "EXPIRED";
+//   }
+// }, 1000);
 
