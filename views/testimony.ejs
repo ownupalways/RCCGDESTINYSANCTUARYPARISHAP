@@ -1,72 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Church Services">
+        <meta name="keywords" content="Sunday Worship, Prayer Weekend, Sunday School, Digging Deep, Faith Clinic">
+        <meta name="Author" content="Oluwadipe Godwin Jesuropo">
+        <title><%= title %></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sofia|Cambria|Times New Roman">
+        <link rel="stylesheet" href="css/Des.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/testimony.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/offerings.css">
+        
+    </head>
 
-<div class="soon-container">
-    <img src="img/faithinGod.jpg">
-    <div class="top-soon">
-        <div class="comin-soon">
-            <h1>Your Testimony is</h1>
-            <hr>
-            <p>COMING SOON...!</p>
-        </div>
-    </div>
-</div>
-<!-- <div id="testimony" class="navTabContent testimony-container">
-    <div class="Point">
-    
-        <div id="PointIn" class="PointIn">
-            <form method="POST" action="/testimony/share" class="testimony-message">
-                <h2><i>Let Somebody Shout Halleluyah!</i></h2>
-                <textarea class="testimonyMessage" name="testimony" placeholder="Testify Here" id="testimony" cols="28" rows="5">
-                    Our God is a faithful God and he never fails.... he has been so good to me and my family in past years and still he is faithful. Please join praise and thank Jesus. Amen!
-                </textarea>
-                <div class="postBtn">
-                    <input type="button" id="PointInDelete" value="Delete">
-                    <input type="submit" name="submit_Btn" id="PointInPost" value="Testify">
+    <body>
+        <div class="media-query-container">
+            <div class="logoAndMenuResponsiveDisplay">
+                <span class="responsive-menu-btns">
+                    <i class="fas fa-bars" id="btn"></i>
+                    <i class="fas fa-times" id="cancel"></i>
+                </span>
+                <!-- <div class="expression-for-header">
+                    <h1>we Love God</h1>
+                </div> -->
+                <div class="head1">
+                    <img src="img/rccg-logo.jpg" width="30" class="logo">
+                    <div class="logo-banner">Destiny Sanctuary Parish</div>
                 </div>
-            </form>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <div class="card-row">
-                <div class="testimonyTag">Testimony Alive</div>
-                <div class="share-card">
-                    <a href="/testimony/share" class="shareBtn">Testify</a>
+            </div>
+            <div class="headerBar">
+                <nav class="mainMenu">
+                    <ul id="menuLine">
+                        <li><a href="/"  class="active pinBtn"><i class="fas fa-home" style='font-size:24px' id="iconBtn"></i>Home</a></li>
+                        <li><a href="/testimony" class="pinBtn"><i class='fab fa-yelp' style='font-size:24px' id="iconBtn"></i>Testimonies</a></li>
+                        <li><a href="/gallery" class="pinBtn"><i class='fas fa-images' style='font-size:24px' id="iconBtn"></i>Gallery</a></li>
+                        <li><a href="/offerings" class="pinBtn"><i class='fas fa-hand-holding-usd' style='font-size:24px' id="iconBtn"></i>Offerings</a></li>
+                        <li><a href="/contact" class="pinBtn"><i class='far fa-address-card' style='font-size:24px' id="iconBtn"></i>Contacts</a></li>
+                        <li><a href="/about" class="pinBtn"><i class='fas fa-book' style='font-size:24px' id="iconBtn"></i>About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> 
+        <div class="soon-container">
+            <img src="img/faithinGod.jpg">
+            <div class="top-soon">
+                <div class="comin-soon">
+                    <h1>Your Testimony is</h1>
+                    <hr>
+                    <p>COMING SOON...!</p>
                 </div>
             </div>
         </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table">
-                    <tr>
-                        <th>testimony</th>
-                        <th>
-                            name
-                        </th>
-                    </tr>
-                </table>
+        <!-- <div id="testimony" class="navTabContent testimony-container">
+            <div class="Point">
+            
+                <div id="PointIn" class="PointIn">
+                    <form method="POST" action="/testimony/share" class="testimony-message">
+                        <h2><i>Let Somebody Shout Halleluyah!</i></h2>
+                        <textarea class="testimonyMessage" name="testimony" placeholder="Testify Here" id="testimony" cols="28" rows="5">
+                            Our God is a faithful God and he never fails.... he has been so good to me and my family in past years and still he is faithful. Please join praise and thank Jesus. Amen!
+                        </textarea>
+                        <div class="postBtn">
+                            <input type="button" id="PointInDelete" value="Delete">
+                            <input type="submit" name="submit_Btn" id="PointInPost" value="Testify">
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-    </div>
-</div> -->
- 
-<!-- <div id="prayer" class="navTabContent">
-    <div class="Service-row">
-        <div class="Service-side"></div>
-        <div class="middle_services">
-            <h3>Prayers</h3>
-            <p>
-                Do you have a special prayer request you the ministry to pray for or with you?<br>
-                
-                Submit your Prayer request to the Pastor and His Ministers. <br>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-row">
+                        <div class="testimonyTag">Testimony Alive</div>
+                        <div class="share-card">
+                            <a href="/testimony/share" class="shareBtn">Testify</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>testimony</th>
+                                <th>
+                                    name
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <!-- <div id="prayer" class="navTabContent">
+            <div class="Service-row">
+                <div class="Service-side"></div>
+                <div class="middle_services">
+                    <h3>Prayers</h3>
+                    <p>
+                        Do you have a special prayer request you the ministry to pray for or with you?<br>
+                        
+                        Submit your Prayer request to the Pastor and His Ministers. <br>
 
-                <i>if there is a man to prayer we have God to answer.</i>
-                <strong>Just have Faith!</strong>
-            </p>
-        </div>
-    </div>
-</div>  -->
-    
-<!-- 
+                        <i>if there is a man to prayer we have God to answer.</i>
+                        <strong>Just have Faith!</strong>
+                    </p>
+                </div>
+            </div>
+        </div>  -->
+            
+        <!-- 
     <div class="Service-row">
         <div class="middle_services">
         <h1><%=title %></h1>
@@ -91,3 +138,78 @@
         </div>
         </div>
  -->
+
+ <!-- FOOTER LINE -->
+        <footer id="footerCard">
+            <div class="footer-itemCard">
+                <div class="footer-item">
+                    <h4 >Special Events</h4>
+                <div class="footer-item-inner-container">
+                        <li><a  href="#">Children</a></li>
+                        <li><a  href="#">Weddings</a></li>
+                        <li><a  href="#">Dedications</a></li>
+                        <li><a  href="#">Year CrossOver Night</a></li>
+                </div> 
+                </div>
+                
+                <div class="footer-item">
+                    <h4 >Media</h4>
+                    <div class="footer-item-inner-container">
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-whatsapp'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-facebook'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-instagram'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-twitter'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-tiktok'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-youtube'></i>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+
+                <div class="footer-item">
+                    <h4 >Address</h4>
+                    <div class="footer-item-inner-container">
+                        <li>
+                            <a href="#">
+                                <i class='fas fa-place-of-worship'>
+                                </i>
+                                Plot 2, Arijo Lane 5A, Idi-Aka, Ayegun, Apete, Ibadan, Oyo State
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='fab fas fas fa-phone-alt'></i>08155319432
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="company">Powered by HBTush Comsat</div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/men.js"></script>
+    </body>
+</html>

@@ -1,154 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Church Services">
+        <meta name="keywords" content="Sunday Worship, Prayer Weekend, Sunday School, Digging Deep, Faith Clinic">
+        <meta name="Author" content="Oluwadipe Godwin Jesuropo">
+        <title><%= title %></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sofia|Cambria|Times New Roman">
+        <link rel="stylesheet" href="css/Des.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/testimony.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/offerings.css">
+        
+    </head>
 
-<div id="gallery">
-    <div class="separate-galleryBtn ">
-        <h1>Gallery</h1>
-        <div class="galleryCard-container">
-            <button class="photoCard galleryCardBtn" onclick="photoCard()">Photos</button>
-            <button class="videoCard galleryCardBtn" onclick="videoCard()">Videos</button>
-        </div>
-    </div>
-        <!-- PHOTO GALLERY STRUCTURE -->
-        <!-- The four columns -->
-    <div class="photoShop">
-        <div class="photo-container-box">
-            <div class="photo-display-container">
-                <span class="close-btn" onclick="CloseBtn()">&times;</span>
-                <img id="expandedImg" style="width:100%">
-                <div id="img-text"></div>
+    <body>
+        <div class="media-query-container">
+            <div class="logoAndMenuResponsiveDisplay">
+                <span class="responsive-menu-btns">
+                    <i class="fas fa-bars" id="btn"></i>
+                    <i class="fas fa-times" id="cancel"></i>
+                </span>
+                <!-- <div class="expression-for-header">
+                    <h1>we Love God</h1>
+                </div> -->
+                <div class="head1">
+                    <img src="img/rccg-logo.jpg" width="30" class="logo">
+                    <div class="logo-banner">Destiny Sanctuary Parish</div>
+                </div>
             </div>
-        </div>
-        <!-- <div class="yearly-photos">
-            <button class="monthly-photos November">November - 2023</button>
-            
-            <button class="monthly-photos November">December - 2023</button>
-        </div> -->
-
-        <div class="photo-gallery-display  all-photoBox">
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+            <div class="headerBar">
+                <nav class="mainMenu">
+                    <ul id="menuLine">
+                        <li><a href="/"  class="active pinBtn"><i class="fas fa-home" style='font-size:24px' id="iconBtn"></i>Home</a></li>
+                        <li><a href="/testimony" class="pinBtn"><i class='fab fa-yelp' style='font-size:24px' id="iconBtn"></i>Testimonies</a></li>
+                        <li><a href="/gallery" class="pinBtn"><i class='fas fa-images' style='font-size:24px' id="iconBtn"></i>Gallery</a></li>
+                        <li><a href="/offerings" class="pinBtn"><i class='fas fa-hand-holding-usd' style='font-size:24px' id="iconBtn"></i>Offerings</a></li>
+                        <li><a href="/contact" class="pinBtn"><i class='far fa-address-card' style='font-size:24px' id="iconBtn"></i>Contacts</a></li>
+                        <li><a href="/about" class="pinBtn"><i class='fas fa-book' style='font-size:24px' id="iconBtn"></i>About</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+        </div> 
+        <div id="gallery">
+            <div class="separate-galleryBtn ">
+                <h1>Gallery</h1>
+                <div class="galleryCard-container">
+                    <button class="photoCard galleryCardBtn" onclick="photoCard()">Photos</button>
+                    <button class="videoCard galleryCardBtn" onclick="videoCard()">Videos</button>
+                </div>
             </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-            </div>
-            <div class="photo-card">
-                <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
-            </div>
-        </div>
-    </div>
-
-    <!-- NEW UPDATE OF PHOTOS -->
-    <!-- <button class="month November">November - 2023</button>
-            <div class="photo-card-montly">
-                <button class="weekly week1">Week One</button>
-                <div class="photo-card-weekly week1">
-                    <div class="photo-card">
-                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-                    </div>
-                    <div class="photo-card">
-                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-                    </div>
-                    <div class="photo-card">
-                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-                    </div>
-                    <div class="photo-card">
-                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                <!-- PHOTO GALLERY STRUCTURE -->
+                <!-- The four columns -->
+            <div class="photoShop">
+                <div class="photo-container-box">
+                    <div class="photo-display-container">
+                        <span class="close-btn" onclick="CloseBtn()">&times;</span>
+                        <img id="expandedImg" style="width:100%">
+                        <div id="img-text"></div>
                     </div>
                 </div>
-                <button class="weekly week2">Week Two</button>
-                <div class="photo-card-weekly week2">
+                <!-- <div class="yearly-photos">
+                    <button class="monthly-photos November">November - 2023</button>
+                    
+                    <button class="monthly-photos November">December - 2023</button>
+                </div> -->
+
+                <div class="photo-gallery-display  all-photoBox">
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
+                    </div>
                     <div class="photo-card">
                         <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
                     </div>
@@ -159,114 +99,296 @@
                         <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
                     </div>
                     <div class="photo-card">
+                        <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
                         <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                    </div>
+                    <div class="photo-card">
+                        <img src="img/church.jpg" alt="we Prayer Everyday" class= "myImage" onclick="imageBtn(this);">
                     </div>
                 </div>
-                <button class="weekly week3">Week Three</button> 
-                <div class="photo-card-weekly week3">
-                    <div class="photo-card">
-                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+            </div>
+
+            <!-- NEW UPDATE OF PHOTOS -->
+            <!-- <button class="month November">November - 2023</button>
+                    <div class="photo-card-montly">
+                        <button class="weekly week1">Week One</button>
+                        <div class="photo-card-weekly week1">
+                            <div class="photo-card">
+                                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                            <div class="photo-card">
+                                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                            <div class="photo-card">
+                                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                            <div class="photo-card">
+                                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                        </div>
+                        <button class="weekly week2">Week Two</button>
+                        <div class="photo-card-weekly week2">
+                            <div class="photo-card">
+                                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                            <div class="photo-card">
+                                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                            <div class="photo-card">
+                                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                            <div class="photo-card">
+                                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                        </div>
+                        <button class="weekly week3">Week Three</button> 
+                        <div class="photo-card-weekly week3">
+                            <div class="photo-card">
+                                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                            <div class="photo-card">
+                                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                        </div> 
+                        <button class="weekly week4">Week Four</button>
+                        <div class="photo-card-weekly week4">
+                            <div class="photo-card">
+                                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                            <div class="photo-card">
+                                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                        </div> 
+                        <button class="weekly week5">Week Five</button>
+                        <div class="photo-card-weekly week5">
+                            <div class="photo-card">
+                                <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                            <div class="photo-card">
+                                <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+                            </div>
+                        </div>         
+                    </div> -->
+
+                <!-- VIDEO GALLERY STRUCTURE -->
+            <div class="video-gallery">
+                <div class="video-container">
+                    <div class="main-video-display">
+                        <div class="videoBox">
+                            <video src="media/redirect.mp4" controls></video>
+                            <h3 class="tag">01. family Sunday Service</h3>
+                        </div>
                     </div>
-                    <div class="photo-card">
-                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
+
+                    <div class="video-playList">
+                        <div class="current-video active">
+                            <video src="media/redirect.mp4" controls></video>
+                            <h3 class="tag">01. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/deletedataform.mp4"></video>
+                            <h3 class="tag">02. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/test1.mp4"></video>
+                            <h3 class="tag">03. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/fetchdata.mp4"></video>
+                            <h3 class="tag">04. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/redirect.mp4"></video>
+                            <h3 class="tag">05. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/responsivePlaylist.mp4"></video>
+                            <h3 class="tag">06. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/deletedataform.mp4"></video>
+                            <h3 class="tag">07. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/deletedataform.mp4"></video>
+                            <h3 class="tag">08. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/deletedataform.mp4"></video>
+                            <h3 class="tag">09. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/deletedataform.mp4"></video>
+                            <h3 class="tag">10. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/deletedataform.mp4"></video>
+                            <h3 class="tag">11. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/deletedataform.mp4"></video>
+                            <h3 class="tag">12. family Sunday Service</h3>
+                        </div>
+
+                        <div class="current-video">
+                            <video src="media/deletedataform.mp4"></video>
+                            <h3 class="tag">13. family Sunday Service</h3>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER LINE -->
+        <footer id="footerCard">
+            <div class="footer-itemCard">
+                <div class="footer-item">
+                    <h4 >Special Events</h4>
+                <div class="footer-item-inner-container">
+                        <li><a  href="#">Children</a></li>
+                        <li><a  href="#">Weddings</a></li>
+                        <li><a  href="#">Dedications</a></li>
+                        <li><a  href="#">Year CrossOver Night</a></li>
                 </div> 
-                <button class="weekly week4">Week Four</button>
-                <div class="photo-card-weekly week4">
-                    <div class="photo-card">
-                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
+                </div>
+                
+                <div class="footer-item">
+                    <h4 >Media</h4>
+                    <div class="footer-item-inner-container">
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-whatsapp'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-facebook'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-instagram'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-twitter'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-tiktok'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a  href="#">
+                                <i class='fab fa-youtube'></i>
+                            </a>
+                        </li>
                     </div>
-                    <div class="photo-card">
-                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-                    </div>
-                </div> 
-                <button class="weekly week5">Week Five</button>
-                <div class="photo-card-weekly week5">
-                    <div class="photo-card">
-                        <img src="img/faithinGod.jpg" alt="We Faith Everywhere" class= "myImage" onclick="imageBtn(this);">
-                    </div>
-                    <div class="photo-card">
-                        <img src="img/rccg-logo.jpg" alt="They know Everywhere" class= "myImage" onclick="imageBtn(this);">
-                    </div>
-                </div>         
-            </div> -->
+                </div>
 
-         <!-- VIDEO GALLERY STRUCTURE -->
-    <div class="video-gallery">
-        <div class="video-container">
-            <div class="main-video-display">
-                <div class="videoBox">
-                    <video src="media/redirect.mp4" controls></video>
-                    <h3 class="tag">01. family Sunday Service</h3>
+                <div class="footer-item">
+                    <h4 >Address</h4>
+                    <div class="footer-item-inner-container">
+                        <li>
+                            <a href="#">
+                                <i class='fas fa-place-of-worship'>
+                                </i>
+                                Plot 2, Arijo Lane 5A, Idi-Aka, Ayegun, Apete, Ibadan, Oyo State
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='fab fas fas fa-phone-alt'></i>08155319432
+                            </a>
+                        </li>
+                    </div>
                 </div>
             </div>
+            <div class="company">Powered by HBTush Comsat</div>
+        </footer>
 
-            <div class="video-playList">
-                <div class="current-video active">
-                    <video src="media/redirect.mp4" controls></video>
-                    <h3 class="tag">01. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/deletedataform.mp4"></video>
-                    <h3 class="tag">02. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/test1.mp4"></video>
-                    <h3 class="tag">03. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/fetchdata.mp4"></video>
-                    <h3 class="tag">04. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/redirect.mp4"></video>
-                    <h3 class="tag">05. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/responsivePlaylist.mp4"></video>
-                    <h3 class="tag">06. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/deletedataform.mp4"></video>
-                    <h3 class="tag">07. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/deletedataform.mp4"></video>
-                    <h3 class="tag">08. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/deletedataform.mp4"></video>
-                    <h3 class="tag">09. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/deletedataform.mp4"></video>
-                    <h3 class="tag">10. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/deletedataform.mp4"></video>
-                    <h3 class="tag">11. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/deletedataform.mp4"></video>
-                    <h3 class="tag">12. family Sunday Service</h3>
-                </div>
-
-                <div class="current-video">
-                    <video src="media/deletedataform.mp4"></video>
-                    <h3 class="tag">13. family Sunday Service</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/men.js"></script>
+    </body>
+</html>

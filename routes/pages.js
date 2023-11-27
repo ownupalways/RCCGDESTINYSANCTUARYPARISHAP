@@ -2,15 +2,11 @@ const express = require('express')
 
 const router = express.Router()
 
-const expressLayouts = require('express-ejs-layouts')
-
-var database = require('../database')
-
-router.use(expressLayouts)
+const database = require('../database')
 
 
 router.get('/', (req, res) => {
-    res.render('index', {title:'RCCG|Destiny Sanctuary Parish-Home'})
+    res.render('index.ejs', {title:'RCCG|Destiny Sanctuary Parish-Home'})
 })
 
 router.get('/about', (req, res) => {
