@@ -12,6 +12,41 @@
   padding: 0;
 }
 
+.login-switch {
+  display: flex;
+  flex-wrap: nowrap;
+  gap:1rem ;
+  color: white;
+}
+
+.login-switch span > .login-btn {
+  padding: 5px 12px;
+  color: var(--white-color);
+  font-size: var(--medium-font);
+  font-family:'Lucida Sans Regular';
+  border: 1px solid white;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.login-switch span > .login-btn:hover {
+ background: rgba(230, 231, 231, 0.6);
+ transition: .4s ease-in-out;
+ -webkit-transition: .4s ease-in-out;
+ -moz-transition: .4s ease-in-out;
+ -ms-transition: .4s ease-in-out;
+ -o-transition: .4s ease-in-out;
+}
+
+.login-switch span > h1 {
+  font-size: var(--large-font);
+  font-family:'Lucida Sans Regular';
+}
+
+
 .programmes {
   width: 800px;
   margin: 8rem 8rem 2rem 8rem;
@@ -29,7 +64,7 @@
   background-color: rgba(61, 60, 60, 0.2);
   color:white;
   font-weight: bolder;
-  font-size: .8rem;
+  font-size: 0.8rem;
   border-radius: 35px;
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
@@ -164,7 +199,7 @@ color: black;
     color: white;
     text-align: center;
     padding: 10px 5px;
-    font-size: .8rem;
+    font-size: 0.8rem;
     border-radius: 8px 8px 0 0;
     z-index: 1;
   }

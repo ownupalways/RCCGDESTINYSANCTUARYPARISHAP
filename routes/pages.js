@@ -6,7 +6,17 @@ const database = require('../database')
 
 
 router.get('/', (req, res) => {
-    res.render('index.ejs', {title:'RCCG|Destiny Sanctuary Parish-Home'})
+    res.render('index', {title:'RCCG|Destiny Sanctuary Parish-Home'})
+})
+
+router.get('/register', (req, res) => {
+    res.render('register', {title:'RCCG-DS|Register'})
+
+    
+})
+
+router.get('/login', (req, res) => {
+    res.render('login', {title:'RCCG-DS|login'})
 })
 
 router.get('/about', (req, res) => {

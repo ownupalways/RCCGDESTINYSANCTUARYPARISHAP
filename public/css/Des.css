@@ -7,8 +7,16 @@
   list-style: none;
   text-decoration: none;
   user-select: none;
-  /* font-size: calc(15px + 0.00390625vw); */
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --small-font: 1rem;
+  --medium-font: 1.3rem;
+  --large-font: 1.5rem;
+  --white-color:white;
+  --black-color: black;
+  --blue-color: blue;
 }
 
 .ultimate {
