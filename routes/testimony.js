@@ -2,12 +2,7 @@ const express = require('express')
 
 const router = express.Router()
 
-const expressLayouts = require('express-ejs-layouts')
-
 const database = require('../database')
-
-router.use(expressLayouts)
-
 
 router.get("/", (req, res, next) => {
     const query = "SELECT * FROM testimony_users ORDER BY id DESC"
