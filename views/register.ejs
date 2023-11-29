@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Church Services">
+        <meta name="keywords" content="Sunday Worship, Prayer Weekend, Sunday School, Digging Deep, Faith Clinic">
+        <meta name="Author" content="Oluwadipe Godwin Jesuropo">
+        <title><%= title %></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sofia|Cambria|Times New Roman">
+        <link rel="stylesheet" href="css/Des.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/testimony.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/offerings.css">
+        
+    </head>
+
+    <body>
+        <div class="media-query-container">
+            <div class="logoAndMenuResponsiveDisplay">
+                <span class="responsive-menu-btns">
+                    <i class="fas fa-bars" id="btn"></i>
+                    <i class="fas fa-times" id="cancel"></i>
+                </span>
+                <!-- <div class="expression-for-header">
+                    <h1>we Love God</h1>
+                </div> -->
+                <div class="head1">
+                    <img src="img/rccg-logo.jpg" width="30" class="logo">
+                    <div class="logo-banner">Destiny Sanctuary Parish</div>
+                </div>
+            </div>
+            <div class="headerBar">
+                <nav class="mainMenu">
+                    <ul id="menuLine">
+                        <li><a href="/"  class="active pinBtn"><i class="fas fa-home" style='font-size:24px' id="iconBtn"></i>Home</a></li>
+                        <li><a href="/testimony" class="pinBtn"><i class='fab fa-yelp' style='font-size:24px' id="iconBtn"></i>Testimonies</a></li>
+                        <li><a href="/gallery" class="pinBtn"><i class='fas fa-images' style='font-size:24px' id="iconBtn"></i>Gallery</a></li>
+                        <li><a href="/offerings" class="pinBtn"><i class='fas fa-hand-holding-usd' style='font-size:24px' id="iconBtn"></i>Offerings</a></li>
+                        <li><a href="/contact" class="pinBtn"><i class='far fa-address-card' style='font-size:24px' id="iconBtn"></i>Contacts</a></li>
+                        <li><a href="/about" class="pinBtn"><i class='fas fa-book' style='font-size:24px' id="iconBtn"></i>About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> 
+        <div class="form-container">
+            <h1>Register</h1>
+            <div class="form-inner-container">
+                <form action="" method="POST">
+                    <div class="reg-info">
+                        <input type="text" id="name" placeholder="Name" name="name" required>
+                        <input type="email" id="email" placeholder="email" name="email" required>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                        <button type="submit" class="reg-submit-btn btn">Submit</button>
+                    </div>
+                    <button type="reset" class="reg-cancel-btn btn" >Cancel</button>
+                    <p>Already a member <a href="/login" class="login-navigation">Login here</a></p>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/men.js"></script>
+    </body>
+</html>
+        
