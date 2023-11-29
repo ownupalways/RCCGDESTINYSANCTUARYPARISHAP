@@ -1,6 +1,9 @@
 const express = require('express')
 const sendMail = require('./mail')
 
+// const Connection = require('.routes/auth')
+const mysql = require("mysql")
+
 const path = require('path')
 
 require('dotenv').config()
@@ -29,7 +32,6 @@ app.use(express.json())
 // CONNECT TO ROUTES**************
 app.use('/', require('./routes/pages'))
 
-
 app.post ('/email', (req, res) => {
 
     const { subject, email, text } = req.body
@@ -43,4 +45,26 @@ app.post ('/email', (req, res) => {
         }
     })
 })
+
+// DATABASE
+
+const Connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'Godwin J. Oluwadipe',
+    password: 'my1integrity'
+})
+
+Connection.connect((err) => {
+    if (err) throw new Error(err)
+    console.log("Connected to Database")
+})
+
+// const Connection = mysql.createConnection({
+//     host: process.env.DATABASE_HOST,
+//     user: process.env.DATABASE_USER,
+//     password: process.env.DATABASE_PASSWORD
+// })
+
+
+
 

@@ -1,0 +1,74 @@
+
+.login {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    background: rgb(35, 196, 46);
+}
+
+.register{
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    background: rgb(52, 52, 207);
+}
+
+.form-LR-container {
+  width: 450px;
+    border: 1px var(--white) solid;
+    padding: 2rem;
+    border-radius: 6pc;
+    -webkit-border-radius: 6pc;
+    -moz-border-radius: 6pc;
+    -ms-border-radius: 6pc;
+    -o-border-radius: 6pc;
+}
+.form-LR-container h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: var(--large-font);
+}
+
+input[type= text], [type=tel], [type=email], [type=password], button[type= submit],[type= reset]{
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    margin: 4px 4px 4px 0;
+   border-radius: 8px;
+   background: transparent;
+   color:#bee2ee;
+   outline: none;
+   border: 1px solid #bee2ee;;
+  }
+
+  form .reg-alternative {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+    color: var(--white);
+  }
+
+
+  .form-LR-container a {
+    color: var(--white);
+    text-decoration: underline;
+  }
+
+  .form-LR-container .reg-submit-btn {
+    transition: all ease-in-out .8s;
+    -webkit-transition: all ease-in-out .8s;
+    -moz-transition: all ease-in-out .8s;
+    -ms-transition: all ease-in-out .8s;
+    -o-transition: all ease-in-out .8s;
+}
+  .form-LR-container .reg-submit-btn:hover {
+    color: var(--black);
+    background: var(--white);
+  }
+  .form-LR-container .btn:hover {
+    cursor: pointer;
+  }
