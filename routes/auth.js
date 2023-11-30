@@ -1,15 +1,16 @@
-// const mysql = require("mysql")
+const express = require("express")
 
-// mysql.createConnection({
-//     host: 'localhost',
-//     user: 'Godwin J. Oluwadipe',
-//     password: 'my1integrity'
-// })
+const mysql = require("mysql")
 
-// Connection.connect((err) => {
-//     if (err) throw new Error(err)
-//     console.log("Connected to Database")
-// })
+const authController = require('../controllers/auth')
+
+const router = express.Router()
+
+router.post('/register', authController.register )
+
+
+
+module.exports = router
 
 
 

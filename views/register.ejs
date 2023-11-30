@@ -21,14 +21,14 @@
         <div class="register">
             <div class="form-LR-container">
                 <h1>Register</h1>
-                <form action="" method="POST">
+                <form action="/auth/register" method="POST">
                     <div class="reg-info">
                         <input type="text" id="name" placeholder="Name" name="name" required>
                         <input type="email" id="email" placeholder="email" name="email" required>
                         <input type="password" id="password" placeholder="Password" required>
                         <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-                        <button type="submit" class="reg-submit-btn btn">Submit</button>
                     </div>
+                    <button type="submit" class="reg-submit-btn btn">Submit</button>
                     <button type="reset" class="reg-cancel-btn btn" >Cancel</button>
                     <p>Already a member <a href="/login" class="login-navigation">Login here</a></p>
                 </form>

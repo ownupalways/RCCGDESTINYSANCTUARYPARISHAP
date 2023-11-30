@@ -116,8 +116,8 @@ menuBtn.addEventListener('click', (e) => {
 })
 
 menuCancelBtn.addEventListener('click', (e) => {
-    let cancelBtnclicked = e.target
-    cancelBtnclicked.style.display = 'none'
+    let cancelBtnClicked = e.target
+    cancelBtnClicked.style.display = 'none'
     headerCard.style.left = '-720px'
     menuBtn.style.display = 'block'
 })
