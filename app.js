@@ -1,17 +1,10 @@
 
 const express = require('express')
-
 const sendMail = require('./mail')
-
 const app = express()
-
 const mysql = require("mysql")
-
 const path = require('path')
-
 require('dotenv').config()
-
-
 
 const port = 3500
 
