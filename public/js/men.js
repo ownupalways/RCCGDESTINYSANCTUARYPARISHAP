@@ -84,24 +84,7 @@ function closeWindow(event) {
 //     PointIn.appendChild(newTestimony)
 // }
 
-// CONTACT INTERACTION FOR EMAIL SENDING
-$('form').on('submit', (e) => {
-    e.preventDefault()
 
-        const email = $('#email').val().trim()
-        const subject = $('#subject').val().trim()
-        const text = $('#text').val().trim()
-
-        const data = {
-            email,
-            subject,
-            text
-        }
-
-        $.post('/email', data, () => {
-            console.log('Server received Our data')
-        })
-    })
 
 // MEDIA QUERY MENU CARD/ SIDEBAR MENU
 let menuBtn = document.querySelector('#btn')
@@ -139,7 +122,7 @@ function videoCard() {
     videoBoxDisplay.style.display = "block"
 }
 
-// PHOTO GALLERY INTERRACTION
+// PHOTO GALLERY INTERACTION
 let photoShopAll = document.querySelector('.photoShop')
 function imageBtn(theImage) {
     let toBeExpandedImage = document.getElementById('expandedImg')
