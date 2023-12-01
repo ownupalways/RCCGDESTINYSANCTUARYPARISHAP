@@ -1,6 +1,3 @@
 {
-    "editor.linkedEditing": true,
-    "cSpell.words": [
-        "mailgun"
-    ]
+    "editor.linkedEditing": true
 }
