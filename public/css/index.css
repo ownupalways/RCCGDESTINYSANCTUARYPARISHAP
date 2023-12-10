@@ -119,21 +119,23 @@ background: var(--white);
 border: 4px var(--white) solid;
 border-top-right-radius: 15px;
 border-bottom-left-radius: 15px;
+z-index: 1111;
 }
 
 .close-panel:hover {
 background-color: rgba(6, 7, 7, 0.4);
 color: var(--white);
+border: 4px var(--black) solid;
 }
 
 .thanksgiving-message {
   overflow: hidden;
   position: relative;
+  /* max-width: 800px; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 400px));
-  height: 80svh;
-  justify-content: space-around;
-  margin: auto;
+  /* height: 80svh; */
+  margin:0 auto; 
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -144,27 +146,37 @@ color: var(--white);
 .thanksgiving-message img {
   width: 100%;
   height:100%;
-  position: absolute;
-  top: 0;
-  z-index: -1;
+  vertical-align: middle;
 }
 
 .content-text {
+  position: absolute;
+  top: 0;
   width: 100%;
-  background: var(--black);
-  opacity: 0.4;
-}
-
-.content-text .text {
-  padding: 20px;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4rem 20px 20px 20px;
   text-align: justify;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: var(--medium-font);
   color: var(--white);
-  z-index: 1;
-  font-family: var(--secondFamily);
 }
 
+.content-text h1 {
+  font-family: sofia;
+  font-size: var(12vw);
+}
+
+.content-text a {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  text-decoration: underline;
+  font-size: var(--medium-font);
+  color: var(--white);
+  font-family: var(--firstFamily);
+}
 
  /* INDEX FLOAT IMAGE FLOW STYLING */
 /* .modalBox-images-container {
