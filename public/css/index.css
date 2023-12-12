@@ -131,11 +131,13 @@ border: 4px var(--black) solid;
 .thanksgiving-message {
   overflow: hidden;
   position: relative;
-  /* max-width: 800px; */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 400px));
-  /* height: 80svh; */
+  max-width: 400px;
+  height: 90svh;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 320px));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 420px)); */
   margin:0 auto; 
+  border: 1px solid white;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -146,7 +148,8 @@ border: 4px var(--black) solid;
 .thanksgiving-message img {
   width: 100%;
   height:100%;
-  vertical-align: middle;
+  object-fit:cover;
+  /* vertical-align: middle; */
 }
 
 .content-text {
@@ -165,13 +168,23 @@ border: 4px var(--black) solid;
 
 .content-text h1 {
   font-family: sofia;
-  font-size: var(12vw);
+  font-size: 2vw;
 }
 
+@media (max-width: 500px) {
+  .content-text h1 {
+    font-size: 5vw;
+  }
+
+  .donation {
+    width: 300px;
+    margin: 2rem 4rem;
+  }
+}
 .content-text a {
   display: flex;
   justify-content: center;
-  margin-top: 8rem;
+  margin-top: 5rem;
   text-decoration: underline;
   font-size: var(--medium-font);
   color: var(--white);
@@ -225,7 +238,7 @@ border: 4px var(--black) solid;
     /* background: white; */
   }
   .boxImage a h3 {
-    position: sticky;
+    position: static;
     background: rgba(12, 12, 12, 0.5);
     color: white;
     text-align: center;
