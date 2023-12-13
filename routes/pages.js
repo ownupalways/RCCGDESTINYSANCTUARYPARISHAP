@@ -51,6 +51,5 @@ router.get('/testimony', (req, res) => {
 //     res.render('testimony', {title:'Share Your Testimony'})
 // })
 
-
-
+router.post
 module.exports = router

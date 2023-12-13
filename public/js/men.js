@@ -84,43 +84,30 @@ function closeWindow(event) {
 //     PointIn.appendChild(newTestimony)
 // }
 
-// CONTACT INTERACTION FOR EMAIL SENDING
-$('form').on('submit', (e) => {
-    e.preventDefault()
-
-        const email = $('#email').val().trim()
-        const subject = $('#subject').val().trim()
-        const text = $('#text').val().trim()
-
-        const data = {
-            email,
-            subject,
-            text
-        }
-
-        $.post('/email', data, () => {
-            console.log('Server received Our data')
-        })
-    })
-
 // MEDIA QUERY MENU CARD/ SIDEBAR MENU
-let menuBtn = document.querySelector('#btn')
+let menuBtn = document.querySelectorAll('#btn')
 let menuCancelBtn = document.querySelector('#cancel')
 let headerCard = document.querySelector('.headerBar')
 
-menuBtn.addEventListener('click', (e) => {
-    let clickedBtn = e.target
-    clickedBtn.style.display = 'none'
-    headerCard.style.left = '0px'
-    menuCancelBtn.style.display = 'block'
-})
+for (let i = 0; i < menuBtn.length; i++) {
+    const readyMenu = menuBtn[i];
+    
+    readyMenu.addEventListener('click', (e) => {
+        let clickedBtn = e.target
+        clickedBtn.style.display = 'none'
+        headerCard.style.left = '0px'
+        menuCancelBtn.style.display = 'block'
+    })
+    
+    menuCancelBtn.addEventListener('click', (e) => {
+        let cancelBtnClicked = e.target
+        cancelBtnClicked.style.display = 'none'
+        headerCard.style.left = '-720px'
+        readyMenu.style.display = 'block'
+    })
+}
 
-menuCancelBtn.addEventListener('click', (e) => {
-    let cancelBtnClicked = e.target
-    cancelBtnClicked.style.display = 'none'
-    headerCard.style.left = '-720px'
-    menuBtn.style.display = 'block'
-})
+
 
 // GALLERY OPERATIONS HERE
 // GALLERY SWITCH

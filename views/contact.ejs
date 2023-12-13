@@ -129,9 +129,28 @@
             </div>
             <div class="company">Powered by HBTush Comsat</div>
         </footer>
+        <script>
+            // CONTACT INTERACTION FOR EMAIL SENDING
+            $('form').on('submit', (e) => {
+                e.preventDefault()
 
+                    const email = $('#email').val().trim()
+                    const subject = $('#subject').val().trim()
+                    const text = $('#text').val().trim()
+
+                    const data = {
+                        email,
+                        subject,
+                        text
+                    }
+
+                    $.post('/email', data, () => {
+                        console.log('Server received Our data')
+                    })
+                })
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js/men.js"></script>
+        <script src="js/men.js" defer></script>
     </body>
 </html>
         
